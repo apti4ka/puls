@@ -27,11 +27,11 @@ $this->setGenerator(null); //отключили мета-тег generator
 	
     <section class="header_menu">
 
-
         <nav id="menu" class="top-menu" onclick="this.className = (this.className == 'topmenu' ? 'mobilemenu' : 'topmenu')"> 
 			<jdoc:include type="modules" name="menu" style="none" />
 			
             <div class="container">
+            
             </div>
 			
             <div class="hamburger">
@@ -40,7 +40,8 @@ $this->setGenerator(null); //отключили мета-тег generator
                 <span></span>
             </div>
         </nav>		
-			
+            
+
         <!-- <div class="subheader">
             <div class="container">
                 <div class="row">
@@ -64,51 +65,54 @@ $this->setGenerator(null); //отключили мета-тег generator
     </section>	
     
    
-  <section class="promo">
-      <div class="promo__container_wrapper">
+    <section class="promo">
+        <div class="promo__container_wrapper">
+            <div class="container">
+                <header class="header">
+                    <a href="#" class="header__logo">
+                        <img src="templates/<?php echo $this->template ?>/icons/logo/sokolov_logo-300.png" alt="logo">
+                    </a>
+                    <div class="header__official">
+                        Профессиональный массаж в Барнауле
+                        <span>Адрес: ул. Никтина 92, г. Барнаул</span>
+                    </div>
+                    <div class="header__contacts">
+                        <a href="tel:+79132503879" class="header__phone">+7 (913) 250-38-79</a>
+                        <button data-modal="consultation" class="button">заказать звонок</button>
+                    </div>
+                </header>
 
-        <div class="container">
-            <header class="header">
-                <a href="#" class="header__logo">
-                    <img src="templates/<?php echo $this->template ?>/icons/logo/sokolov_logo-300.png" alt="logo">
-                </a>
-                <div class="header__official">
-                Адрес: ул. Никтина 92, г. Барнаул
-                    <span>Профессиональный массаж в Барнауле</span>
-                </div>
-                <div class="header__contacts">
-                    <a href="tel:+79132503879" class="header__phone">+7 (913) 250-38-79</a>
-                    <button data-modal="consultation" class="button">заказать звонок</button>
-                </div>
-            </header>
-            <div class="promo__wrapper">
-                <h1 class="promo__header">Подбор пульсометра</h1>
-                <h2 class="promo__subheader">с учётом Вашего уровня подготовки</h2>
-                <div class="promo__icons">
-                    <div class="promo__icon">
-                        <img src="templates/<?php echo $this->template ?>/icons/main_screen/timer.png" alt="timer">
-                        Время подбора:
-                        10 минут
+                <div class="promo__wrapper">
+                    <h1 class="promo__header">
+                        Индивидуальный
+                        <br>
+                        Подбор массажа</h1>
+                    <h2 class="promo__subheader">с учётом Вашего состояния<br>здоровья</h2>
+                    <div class="promo__icons">
+                        <div class="promo__icon">
+                            <img src="templates/<?php echo $this->template ?>/icons/main_screen/timer.png" alt="timer">
+                            Время подбора:
+                            10 минут
+                        </div>
+                        <div class="promo__icon">
+                            <img src="templates/<?php echo $this->template ?>/icons/main_screen/hand-cart.png" alt="hand-cart">
+                            Бесплатная
+                            доставка
+                        </div>
+                        <div class="promo__icon">
+                            <img src="templates/<?php echo $this->template ?>/icons/main_screen/messages.png" alt="messages">
+                            Ответим
+                            на все вопросы
+                        </div>
                     </div>
-                    <div class="promo__icon">
-                        <img src="templates/<?php echo $this->template ?>/icons/main_screen/hand-cart.png" alt="hand-cart">
-                        Бесплатная
-                        доставка
+                    <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
+                    <div class="promo__link">
+                        или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
                     </div>
-                    <div class="promo__icon">
-                        <img src="templates/<?php echo $this->template ?>/icons/main_screen/messages.png" alt="messages">
-                        Ответим
-                        на все вопросы
-                    </div>
-                </div>
-                <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
-                <div class="promo__link">
-                    или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
                 </div>
             </div>
         </div>
 
-      </div>
     </section>
 
     <section class="advantages">
@@ -118,7 +122,7 @@ $this->setGenerator(null); //отключили мета-тег generator
                 <div class="advantages__item">
                     <img src="templates/<?php echo $this->template ?>/icons/advantages/cup.png" alt="cup" class="advantages__icon">
                     <div class="advantages__subtitle">
-                        Делимся опытом
+                        12 лет опыта
                     </div>
                     <div class="advantages__descr">Наши сотрудники всегда готовы поделиться своим опытом, 
                         так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!
@@ -130,18 +134,16 @@ $this->setGenerator(null); //отключили мета-тег generator
                         Заботимся о здоровье
                     </div>
                     <div class="advantages__descr">Мы работаем для того, 
-                        чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
+                        чтобы Ваши сеансы массажа шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
                     </div>
                 </div>
                 <div class="advantages__item">
                     <img src="templates/<?php echo $this->template ?>/icons/advantages/shoe.png" alt="shoe" class="advantages__icon">
                     <div class="advantages__subtitle">
-                        Учим бегать
+                        Удобное растоложение
                     </div>
-                    <div class="advantages__descr">Помогаем с обучением 
-                        правильной технике бега!
-                        <br> 
-                        Дружим с крупнейшей школой бега в России - 
+                    <div class="advantages__descr">Находится в центре города, между остановками Дом Союзов и Анатолия. 
+                        <br>  
                         <a href="#">I LOVE RUNNING.</a>
                     </div>
                 </div>

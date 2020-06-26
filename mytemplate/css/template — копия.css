@@ -1,0 +1,1210 @@
+* {
+margin:0;
+padding:0;
+}
+
+aside, footer, address, section, nav, header {
+display: block;
+}
+
+img, iframe, video, embed {
+max-width:100%!important;
+}
+
+
+/* Типографика  */
+
+h1 {
+	font-size:2.6em;
+	color:#4c4b4b;
+	padding:0 0 0.3em 0;
+}
+
+h2 {
+	font-size:2em;
+	color:#484848;
+	padding:0 0 0.3em 0;
+}
+
+h3 {
+	font-size:1.875em;
+	color:#555;
+	padding:0 0 0.3em 0;
+}
+
+#text p {
+	font-size: 1.125em;
+	color: #333;
+	padding: 0 0 0.5em 0
+}
+
+#text a {
+color:#fb8303;	
+}
+
+#text a:hover {
+text-decoration: none;	
+}
+
+#text ul {
+	padding: 0.5em 20px;	
+}
+
+#text ul li {
+	font-size: 1.125em;
+	color: #555;
+	padding: 0 0 0.3em 0;	
+}
+
+.divider {
+	padding:0 3px 0 0;
+}
+
+
+/* Layuout */
+
+#page {
+width:100%;
+font:100% 'PT Sans Narrow', sans-serif;
+}
+
+header{
+width: 100%;
+padding-top: 1em;
+}
+
+/*
+header#header-background {	
+background: url('../images/imeges_schapka.jpg') no-repeat center;
+width: 100%;	
+float: left;
+padding: 1em;	
+}
+
+*/
+
+.layout {
+width: 1170px;
+margin: 0 auto;
+overflow: hidden; /* - если есть обтикание в блоке то ставим hidden */
+}
+
+#logo {
+width: 39%;
+float: left;	
+}
+
+#logo img {
+display: block;
+}
+
+#logo span {
+  font-size: 1.5em;
+  color: #222;
+}
+
+#geo {
+width: 33%;
+float: left;
+}
+
+#geo span {
+display: block;
+font-size: 1.5em;
+font-weight: bold;
+color: #222;
+margin: 0 auto;
+width: 55%
+}
+
+#geo span a{
+  font-size: 0.83em;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 0.1em 8px;
+  color: #444;
+  background: linear-gradient(to top, #fca407,#fcca2f);
+  display: inline;
+  border-radius: 3px;
+}
+
+#geo span a:hover {
+background: linear-gradient(to top, #fcca2f,#fca407);
+}
+
+#geo img {
+position: relative;
+left: 45px;
+top: 10px;
+float: left;
+display: block;
+text-align: center;
+}
+
+#phone {
+width: 28%;
+float:right;
+text-align: right;
+font-weight: bold;
+}
+
+#phone a {
+  font-size:2.5em; 
+  color: #2a2929;
+  text-decoration: none;
+  display: block;
+}
+
+#phone a.tel span{
+  color: #777;
+}
+
+#phone span.time {
+  font-size:1.5em; 
+  color: #777;
+}
+
+
+
+#menu {
+  background: #383636;
+  width: 100%;
+  margin: 1.3em 0 0 0;
+}
+
+#menu ul li {
+  float: left;
+  list-style: none;
+}
+
+#menu ul li a {
+  display: block;
+  font-size: 1.5em;
+  color: #fff;
+  padding: 0.5em 35px;
+  text-decoration: none;
+  transition: all .3s linear;	
+}
+
+#menu ul li a:hover, #menu ul li.current a {
+  background: #feba02;
+  transition: all .3s linear;
+}
+
+#menu ul li > ul {
+  display: none;
+}
+
+#menu ul li:hover > ul{
+
+display: block;
+z-index: 9999;
+position: absolute;
+background: #383636;
+padding: 3px 5px;
+border: 2px solid #fff;
+
+}
+
+#menu ul li > ul li {
+  float: none;
+
+}
+
+
+#menu ul li ul li> ul {
+
+position: static;
+left: 98%;
+top: -2px;	
+}
+
+/* Начало меню варант 2 по новому*/
+
+/** #menu2 {
+margin-bottom: 300px;
+}
+
+*/
+
+
+#menu2 {
+  background: #777;
+  width: 100%;
+  margin: 1.3em 0 0 0;
+}
+
+
+#menu2 ul li {
+  float: left;
+  list-style: none;
+}
+
+#menu2 ul li a {
+  display: block;
+  font-size: 1.5em;
+  color: #fff;
+  padding: 0.5em 35px;
+  text-decoration: none;
+  transition: all .3s linear;	
+}
+
+#menu2 ul li a:hover, #menu2 ul li.current a {
+  background: #feba02;
+  transition: all .3s linear;
+}
+
+#menu2 ul li > ul {
+  display: none;
+}
+
+#menu2 ul li:hover > ul{
+
+display: block;
+z-index: 9999;
+position: absolute;
+background: #383636;
+padding: 3px 5px;
+border: 2px solid #fff;
+
+}
+
+#menu2 ul li > ul li {
+  float: none;
+}
+
+#menu2 ul li > ul li > ul {
+	position: absolute;
+	margin: -3.6em 0 0 290px;
+}
+
+#menu2 ul li > ul li > ul a{
+	  padding: 0.5em 1.3em;
+	  width: 10em;
+	  	
+}
+
+
+
+
+
+
+/* Конец меню варант 2*/
+
+
+
+/* Начало меню варант 2*/
+/*
+#menu2 {
+margin-bottom: 300px;
+}
+
+.top-menu {
+	width: 960px;
+	height: 50px;
+	margin: 0 auto;
+	
+}
+
+.top-menu:before {
+	width: 100%;
+	content:"";
+	display: block;
+	height: 50px;
+	background: #000;
+	position: absolute;
+	left: 0em;
+	top: 14em;
+	z-index: -1;
+}
+
+.top-menu ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	transition: all .4s;
+
+}
+
+.top-menu ul.menu li.current  {
+	float: left;
+}
+
+
+.top-menu ul.menu li {
+	float: left;
+}
+
+.top-menu ul.menu li a {
+	display: block;
+	height: 50px;
+	color: #444;
+	text-transform: uppercase;
+	line-height: 50px;
+	padding: 0 30px;
+	text-decoration: none;
+	transition: all .3s;
+}
+ 
+
+.top-menu ul.menu li a:hover {
+	background: #777;
+}
+
+.top-menu ul.menu li.unstyled  ul  {
+	background: #000;
+	position: absolute;
+	width: 160px;
+	top: 50px;
+}
+
+.top-menu ul.menu li ul li a {
+	width: 100px;
+}
+
+.top-menu ul.menu li:hover ul {
+	top: 50px;;
+}
+*/
+
+
+/*  Конец меню варант 2*/
+ 
+#content {
+  width: 100%;
+}
+
+
+#text {
+  width: 65.8%;
+  float: left;
+  padding-top: 1.3em;
+} 
+
+#breadcrumbs {
+	width: 96%;
+	background: #eee;
+	padding: 0.5em 0;
+	overflow: hidden; /* если, что-нибудь не поместиться, что бы обрезалось */
+	margin-bottom: 1.5em;
+}
+
+#breadcrumbs ul li {
+	float: left;
+	list-style: none; /* убрать маркеры у спаска*/
+}
+
+
+#sidebar {
+width: 31%;
+float: right;
+background: url('../images/sidebar.jpg');
+padding: 1.3em 0;
+}
+
+footer {
+	width: 100%;
+	background: url('../images/dark.jpg');
+	padding: 1em 0;
+	font-size: 1.25em;
+}
+
+footer p {
+color: #eee;	
+}
+
+.box3 {
+	width: 33%;
+	float: left;
+}
+
+footer a {
+	color:#fcc328;
+	text-decoration: none;
+}
+
+.debug {
+	background: #181717;
+	color:#eee;
+	text-align: center;
+	font-size: 1.25em;
+	padding: 0.3em 0;
+}
+
+
+/* модули */
+
+.moduletable, .moduletable-form, .moduletable-otziv {
+	margin: 0 0 2em;  
+	padding: 0 6%;
+}
+
+
+#sidebar ul.menu {
+	list-style: none;
+	font-size:1.5em;
+	padding: 0 0 0.2em;
+}
+
+#sidebar ul.menu li {
+	font-size:0.9em;
+	padding: 0 0 0.2em;
+}
+
+#sidebar ul.menu li ul { /* пункты */
+	padding: 0.2em 0 0 1em;
+	list-style: none;
+}
+
+
+#sidebar ul.nav-child.unstyled.small ul{ /* подпункты */
+	padding: 0.2em 0 0 2em;
+	margin: 0.2em 0 0 0.3em;
+	list-style: arabic-indic;
+}
+
+#sidebar ul.menu li a {
+	color: #484848;
+	text-decoration: none;
+	
+}
+
+#sidebar ul.menu li a:hover {
+	color:#ff8a00;
+}
+
+.moduletable-dark {  /*модуль контакты*/
+background: url('../images/dark.jpg');
+	padding: 0 6% 1.5em 6%;
+	margin: 0 0 2em 0;
+}
+
+.moduletable-dark h3 {
+	color:#fff;
+	padding: 0.5em 0 0.3em 0;
+}
+
+.moduletable-dark p {
+	font-size: 1.5em;
+	color:#ece9e9;
+	padding: 0 0 0.3em 0;
+}
+
+.moduletable-dark a {
+	color:#fcc328;
+	text-decoration: none;
+}
+
+.moduletable-dark a:hover {
+	text-decoration: underline;
+}
+
+.moduletable-form {
+	background: url('../images/pencil.png') top 50px right 30px no-repeat;  
+}
+
+
+#mod-rscontact-contact-form-94 fieldset {
+border: 0;	
+}
+
+#mod-rscontact-counter-94 { /* надпись 1000 знаков осталось */
+	font-size: 1em;
+	display:none;
+	
+}
+
+.rscontact{
+	padding:0.2em 0 0 0;
+}
+
+#mod-rscontact-email-94 {
+	width:65%;
+	display:block;
+	margin:0 0 1em 0;
+}
+
+
+#mod-rscontact-mobile-phone-94, #mod-rscontact-message-94 {
+	width:65%;
+    margin:1em 0 1em 0;
+    display:block;
+}
+
+.required.mod-rscontact-width-auto {
+	padding: 0.5em 0 0.5em 0.5em;
+	font-size: 1.125em;
+}
+
+
+
+#mod-rscontact-submit-btn-94 {
+  font: 1.5em 'PT Sans Narrow', sans-serif;
+  padding: 0.15em 45px;
+  margin-top: 0.3em; 
+  color: #2a2929;
+  background: linear-gradient(to top, #fca407,#fcca2f);
+  border: none;
+}
+
+#mod-rscontact-submit-btn-94:hover {
+background: linear-gradient(to top, #fcca2f,#fca407);
+}
+
+
+/* Отзывы */
+
+.moduletable-otziv h3 {
+	color:#555;
+	padding: 0.5em 0 0.3em 0;
+}
+
+.moduletable-otziv h4 {
+	color:#484848;
+	padding: 0.5em 0 0.9em 0;
+}
+
+.moduletable-otziv p {
+	font-size: 1.125em;
+	color:#484848;
+	
+}
+
+.table_img_price{
+	display: block;
+	padding: 0 0 0 25%;
+	margin: 0 1em 0.5em 0;
+}
+
+footer .moduletable ul li {
+	list-style: none;
+	padding: 0 0 0.2em 0;
+}
+
+
+
+footer .box3 {
+	text-align: right;
+}
+
+footer .box3 a {
+	display: block;
+
+}
+
+footer .logo_footer {
+	padding: 0 5% 0 0;	
+}
+
+
+footer .box3 span {
+	font-size:1.875em;
+	color:#d0cfcf;
+	padding-right:5%;
+}
+
+footer .box3 .socbutt a {
+	display: inline-block;
+	padding: 0 0 0 5%;
+}
+
+footer .box3 .socbutt {
+margin: 1em;
+}
+
+
+/* Размеры bootstrap */
+
+.aftertext {
+	width: 100%;
+	overflow: hidden;
+	padding: 2em 0 0 0;
+}
+
+.aftertext .span6 {
+	width: 48.936170208%;
+	*width: 48.882978718638%;
+}
+
+.aftertext .moduletable, .aftertext .moduletable-form{
+	float: left;
+	padding: 0 1% 0 0;
+}
+
+
+
+/* Фишки */
+
+#toTop {
+	width:100px;
+	border:1px solid #ccc;
+	background:rgba(0,0,0,0.5);
+	text-align:center;
+	padding:5px;
+	position:fixed;
+	bottom:10px; /* отступ кнопки от нижнего края страницы*/
+	right:10px;
+	cursor:pointer;
+	display:none;
+	color:#eee;
+	font-family:verdana;
+	font-size:11px;
+}
+
+#toTop:hover {
+	background:rgba(0,0,0,1);	
+}
+
+
+/*        Стили для модальных окон          */
+
+.Window {
+ position: fixed;
+ font-family: Arial, Helvetica, sans-serif;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ background: rgba(0,0,0,0.7);
+ z-index: 99999;
+ -webkit-transition: opacity 400ms ease-in;
+ -moz-transition: opacity 400ms ease-in;
+ transition: opacity 400ms ease-in;
+ display: none;
+ pointer-events: none;
+}
+
+.Window:target {
+ display: block;
+ pointer-events: auto;
+}
+
+.Window > div {
+ width: 60%;
+ height: 60%;	
+ position: relative;
+ margin: 10% auto;
+ padding: 30px 10px 10px;
+ border-radius: 10px;
+ background: #fff;
+ box-shadow: 0px 0px 20px 2px;
+}
+
+.close {
+ background: #cc3300;
+ color: #FFFFFF;
+ line-height: 25px;
+ position: absolute;
+ right: -12px;
+ text-align: center;
+ top: -10px;
+ width: 24px;
+ text-decoration: none;
+ font-weight: bold;
+ -webkit-border-radius: 12px;
+ -moz-border-radius: 12px;
+ border-radius: 12px;
+ -moz-box-shadow: 1px 1px 3px #000;
+ -webkit-box-shadow: 1px 1px 3px #000;
+ box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #990000; }
+
+
+/* Responsive   */
+
+
+/* 1024 px */
+@media screen and (max-width:1024px),only screen and (max-device-width:1024px) {
+
+.layout {
+width: 960px;		
+}
+
+}
+
+/* 854 px */
+@media screen and (max-width:854px),only screen and (max-device-width:854px) {
+
+.layout {
+width: 810px;		
+}
+	
+#geo img {
+display: none;		
+}	
+	
+#geo span a {
+font-size: 0.7em;
+font-weight: bold;
+}	
+
+#logo {
+width: 35%;	
+}	
+	
+#logo span {
+font-size:1.2em;	
+}	
+	
+#phone {
+width: 32%;		
+}	
+	
+footer p {
+width: 90%;		
+}	
+
+.moduletable-form {
+	background: none;  
+}	
+	
+#mod-rscontact-email-94 {
+	width:90%;
+	display:block;
+	margin:0 0 1em 0;
+}
+
+
+#mod-rscontact-mobile-phone-94, #mod-rscontact-message-94 {
+	width:90%;
+    margin:1em 0 1em 0;
+    display:block;
+}
+
+.moduletable, .moduletable-form, .moduletable-otziv {
+    margin: 0 0 2em;
+    padding: 0 4%;
+}
+
+		
+}
+
+
+/* 800 px */
+@media screen and (max-width:800px),only screen and (max-device-width:800px) {
+
+.layout {
+width: 760px;		
+} 
+	
+#logo {
+width: 31%;		
+}	
+
+#logo span {
+    font-size: 1.06em;
+}
+	
+#geo {
+width: 35%;		
+}	
+
+#phone {
+width: 32%;			
+}
+	
+	#phone a {
+		font-size: 2.3em;
+	}
+	
+	#sidebar {
+    	width: 33%;
+	}
+	
+	footer .box3 .socbutt {
+	    margin: 1em 0 0 0;
+	}
+	
+}
+
+
+/* 768 px */
+@media screen and (max-width:768px),only screen and (max-device-width:768px) {
+
+.layout {
+width: 720px;		
+} 
+	
+#logo {
+width: 31%;		
+}	
+
+#logo span {
+    font-size: 0.9em;
+	font-weight: bold;
+
+}
+	
+#geo {
+width: 31%;
+	margin: 0 0 0 4%;
+}	
+	
+#geo span {
+	width: 90%;
+    font-size: 1.375em;
+
+
+}	
+	
+#geo span a {
+	display: block;
+    font-size: 1.1em;
+	margin:0.3em 0 0 0;
+}	
+
+	
+#phone a {
+		font-size: 2em;
+	}
+	
+#menu ul li a {
+	font-size: 	1.3em;
+	}	
+	
+footer .box3 span {
+	padding: 0;
+	}
+		
+footer .box3 .tel {
+	    font-size: 0.9em;
+		padding:0;
+	}
+		
+	
+}
+
+
+
+/* 640 px */
+@media screen and (max-width:640px),only screen and (max-device-width:640px) {
+
+.layout {
+width: 600px;		
+} 
+	
+#logo {
+width: 36%;		
+}	
+
+#logo span {
+    font-size: 0.9em;
+	font-weight: bold;
+
+}
+	
+#geo {
+width: 28%;
+	margin: 0 0 0 4%;
+}	
+	
+#geo span {
+	width: 90%;
+    font-size: 1.2em;
+
+
+}	
+	
+#geo span a {
+	display: block;
+    font-size: 0.9em;
+	margin:0.3em 0 0 0;
+}	
+
+#phone {
+		width: 30%;
+	}
+	
+	
+#phone a {
+		font-size: 1.5em;
+	}
+	
+#text {
+
+    width: 57.8%;
+}
+	
+#sidebar {
+
+    width: 41%;
+	}
+
+	#fixed {
+		position: static;
+		margin-top:0!important; 
+	}	
+	
+#menu ul li a {
+	font-size: 	1em;
+	padding: 0.5em 25px;
+	
+	}	
+		
+.aftertext .span6 {
+		width: 100%;
+	}
+	
+	
+footer .box3 span {
+	padding: 0;
+	}
+		
+footer .box3 .tel {
+	    font-size: 0.8em;
+		padding:0;
+	}
+
+}
+
+
+
+/* 600 px */
+@media screen and (max-width:600px),only screen and (max-device-width:600px) {
+
+.layout {
+width: 540px;		
+} 
+	
+	
+/* Mobilemenu */	
+	
+#menu.topmenu {
+	height: 2.5em;	
+	background: #383636 url(../images/menuicon.png) no-repeat center left 2%;
+	cursor: pointer;
+	transition: 1s;
+	}	
+	
+#menu.topmenu ul li {
+	display: none;
+	}		
+	
+#menu.mobilemenu {
+	background: #383636 url(../images/menuicon.png) no-repeat top 1em left 2%;
+	cursor: pointer;
+	transition: 1s;
+	}
+	
+#menu.mobilemenu ul {
+	width: 90%;
+	padding: 0 0 0 8%;
+	}	
+	
+#menu.mobilemenu ul > lu{
+	padding: 0;
+	}	
+	
+	
+/* End */	
+	
+#logo {
+	width: 100%;	
+	float: none;
+	margin: 0 0 1em 0;	
+	text-align: center;
+}	
+
+#logo img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+#logo span {
+    font-size: 1.3em;
+	margin:0 auto;
+}
+	
+#geo {
+	float: none;
+	width: 100%;
+	margin: 1em 0;
+	text-align:center; 
+}	
+	
+#geo span {
+	width: 100%;
+    font-size: 1.5em;
+}	
+	
+#geo span a {
+	display: block;
+    font-size: 0.9em;
+	width: 35%;
+	margin: 0.2em auto;
+}	
+
+#phone {
+	text-align: center;
+	width: 100%;
+	float: none;	
+	margin: 1em 0;
+	}
+	
+	
+#phone a.tel {
+		font-size: 1.9em;
+	}
+	
+#phone span.time {
+		font-size: 1.5em;
+	}	
+	
+#text {
+
+    width: 100%;
+}
+	
+#sidebar {
+
+    width: 100%;
+	}
+
+	#fixed {
+		position: static;
+		margin-top:0!important; 
+	}	
+	
+#menu ul li {
+		float:none; 
+	}
+	
+
+#menu ul li > ul {
+  display: none;
+}
+
+#menu ul li > ul, #menu ul li:hover > ul {
+
+display: block;
+background: #4b4848;
+position: static;
+z-index: 0;
+padding: 3px 5px;
+border: none;
+border-top: 2px solid #777;
+border-bottom: 2px solid #777;
+font-size: 80%;
+}
+
+	
+#menu ul li > ul li {
+  float: none;
+
+}
+	
+	
+#menu ul li a {
+	font-size: 	1.5em;
+	padding: 0.5em 25px;
+	
+	}	
+		
+.aftertext .span6 {
+		width: 100%;
+	}
+	
+.box3 {
+	width: 100%;
+	float: none;
+	margin: 1em 0;
+	}	
+	
+footer .box3 {
+	text-align: center;	
+	}	
+	
+footer .box3 span {
+	padding: 0 0 0 5%;
+	}
+		
+footer .box3 .tel {
+	    font-size: 0.8em;
+		padding:0;
+	}
+	
+}
+
+
+
+
+/* 480 px */
+@media screen and (max-width:480px),only screen and (max-device-width:480px) {
+
+.layout {
+width: 440px;		
+} 
+
+	
+#geo span a {
+	display: block;
+    font-size: 0.9em;
+	width: 40%;
+	margin: 0.2em auto;
+}	
+
+}
+
+
+
+
+/* 375 px */
+@media screen and (max-width:375px),only screen and (max-device-width:375px) {
+
+.layout {
+width: 330px;		
+} 
+
+	
+#geo span a {
+	display: block;
+    font-size: 0.9em;
+	width: 50%;
+	margin: 0.2em auto;
+}	
+	
+footer .box3 {
+	text-align: left;
+	}	
+
+}
+
+
+
+/* 360 px */
+@media screen and (max-width:360px),only screen and (max-device-width:360px) {
+
+.layout {
+width: 320px;		
+} 
+
+	
+#geo span a {
+	display: block;
+    font-size: 0.8em;
+	width: 50%;
+	margin: 0.2em auto;
+}	
+
+}
+
+
+
+/* 320 px */
+@media screen and (max-width:320px),only screen and (max-device-width:320px) {
+
+.layout {
+width: 280px;		
+} 
+
+	
+#geo span a {
+	display: block;
+	width: 60%;
+	margin: 0.2em auto;
+}	
+
+}
+

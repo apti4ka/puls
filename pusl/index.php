@@ -40,48 +40,32 @@ $this->setGenerator(null); //отключили мета-тег generator
                 <span></span>
             </div>
         </nav>		
-            
-
-        <!-- <div class="subheader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 col-md-4 offset-md-1">
-                    <a href="/" class="subheader_logo"><img class="subheader_img" src="templates/<?php echo $this->template ?>/images/logo/sokolov_logo-300.png" alt="logo"></a>
-                        <div class="subheader_official">Профессиональный массаж в Барнауле</div>
-                    </div>
-    
-                    <div class="xs-hidden col-md-3 offset-md-1 col-xl-2 offset-xl-2">
-                        <div class="subheader_call">Звоните нам ежедневно</div>
-                        <a href="tel:+79132503879" class="subheader_phone">8 913 250 38 79</a>
-                    </div>
-    
-                    <div class="col-6 col-md-3 col-lg-2">
-                        <a href="tel:+79132503879" class="xs-visible subheader_phone">8 913 250 38 79</a>
-                        <button class="subheader_btn">заказать звонок</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+     
     </section>	
     
-   
+    <?php if($this->countModules('promo')):?>
     <section class="promo">
-        <div class="promo__container_wrapper">
-            <div class="container">
-                <header class="header">
-                    <a href="#" class="header__logo">
-                        <img src="templates/<?php echo $this->template ?>/icons/logo/sokolov_logo-300.png" alt="logo">
-                    </a>
-                    <div class="header__official">
-                        Профессиональный массаж в Барнауле
-                        <span>Адрес: ул. Никтина 92, г. Барнаул</span>
-                    </div>
-                    <div class="header__contacts">
-                        <a href="tel:+79132503879" class="header__phone">+7 (913) 250-38-79</a>
-                        <button data-modal="consultation" class="button">заказать звонок</button>
-                    </div>
-                </header>
+    <?php endif; ?>
 
+    <div class="promo__header_wrapper">
+        <div class="promo__container_wrapper">
+   
+                <div class="container">
+                    <header class="header">
+                        <a href="/" class="header__logo">
+                            <img src="templates/<?php echo $this->template ?>/icons/logo/sokolov_logo-300.png" alt="logo">
+                        </a>
+                        <div class="header__official">
+                            Профессиональный массаж в Барнауле
+                            <span>Адрес: ул. Никтина 92, г. Барнаул</span>
+                        </div>
+                        <div class="header__contacts">
+                            <a href="tel:+79132503879" class="header__phone">+7 (913) 250-38-79</a>
+                            <button data-modal="consultation" class="button">заказать звонок</button>
+                        </div>
+                    </header>
+
+                    <?php if($this->countModules('promo')):?>
                 <div class="promo__wrapper">
                     <h1 class="promo__header">
                         Индивидуальный
@@ -110,11 +94,25 @@ $this->setGenerator(null); //отключили мета-тег generator
                         или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
-
+    </div>
     </section>
 
+    <section class="content">
+        <div class="container">
+            <?php if($this->countModules('breadcrumbs')):?>
+                <div class="breadcrumbs">
+                    <jdoc:include type="modules" name="Breadcrumbs" style="none" />
+                </div>
+            <?php endif; ?>
+                <jdoc:include type="message" />
+                <jdoc:include type="component" />
+        </div>
+    </section>
+
+    <?php if($this->countModules('advantages')):?>            
     <section class="advantages">
         <div class="container">
             <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
@@ -151,7 +149,9 @@ $this->setGenerator(null); //отключили мета-тег generator
 
         </div>
     </section>
+    <?php endif; ?>
 
+    <?php if($this->countModules('consultation')):?>
     <section class="consultation">
         <div class="container">
             <h2 class="title title_left">
@@ -171,6 +171,9 @@ $this->setGenerator(null); //отключили мета-тег generator
             </form>
         </div>
     </section>
+    <?php endif; ?>
+
+
 
     <section class="carousel">
         <div class="container">
@@ -213,10 +216,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                 </a>
               </div> -->
         
-        </div>
+        <!-- </div>-->
     </section>
 
-    <section class="catalog">
+    <!-- <section class="catalog">
         <div class="container container_catalog">
             <h2 class="title">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
@@ -457,61 +460,20 @@ $this->setGenerator(null); //отключили мета-тег generator
                 </div>
               
         </div>
-    </section>
+    </section> -->
 
+    <?php if($this->countModules('reviews')):?>
     <section class="reviews">
         <div class="container">
-            <h2 class="title">отзывы клиентов</h2>
-            <div class="row">
-                <div class="reviews__item">
-                    <div class="col-md-2"><img class="reviews__img" src="templates/<?php echo $this->template ?>/img/feed_1.png" alt="reviews"></div>
-                    <div class="col-md-8">
-                        <div class="reviews__header">
-                            Ирина Иванченко 
-                        </div>
-                        <div class="reviews__subheader">2 полумарафона</div>
-                        <div class="reviews__descr">
-                            Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности.
-                            Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же.
-                            <br><br>   
-                            Новые цели - новый гаджет!
-                            <br><br>
-                            Спасибо, RunSmart! 
-                            </div>
-                    </div>
-                </div>
-                <div class="reviews__item">
-                    <div class="col-md-2"><img class="reviews__img" src="templates/<?php echo $this->template ?>/img/feed_2.png" alt="reviews"></div>
-                    <div class="col-md-8">
-                        <div class="reviews__header">Иван Сёмочкин</div>
-                        <div class="reviews__subheader">1 полумарафон</div>
-                        <div class="reviews__descr">
-                            Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал. 
-                            Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.
-                            <br><br>
-                            С ними подготовился к своему первому полумарафону! Спасибо!!!
-                            </div>
-                    </div>
-                </div>
-                <div class="reviews__item">
-                    <div class="col-md-2"><img class="reviews__img" src="templates/<?php echo $this->template ?>/img/feed_3.png" alt="reviews"></div>
-                    <div class="col-md-8">
-                        <div class="reviews__header">Юлия Дашкина</div>
-                        <div class="reviews__subheader">2 полумарафона</div>
-                        <div class="reviews__descr">
-                            Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать.
-                            <br><br>
-                            Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться!
-                            <br><br>
-                            Спасибо!!!
-                        </div>
-                    </div>
-                </div>
 
+        <h2 class="title">отзывы клиентов</h2>
 
-            </div>
+        <jdoc:include type="modules" name="reviews" style="none" />
+
+           
         </div>
     </section>
+    <?php endif; ?>
 
     <footer class="footer">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.474981139927!2d83.78428131564897!3d53.33475318328089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dda5d25e61026d%3A0xacf26f29f0455edb!2z0KHRgtGD0LTQuNGPINC80LDRgdGB0LDQttCwINCQ0LvQtdC60YHQsNC90LTRgNCwINCh0L7QutC-0LvQvtCy0LA!5e0!3m2!1sru!2sru!4v1589809287399!5m2!1sru!2sru" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -527,6 +489,64 @@ $this->setGenerator(null); //отключили мета-тег generator
             </div>
         </div>
     </footer>
+
+    
+    <!-- <section class="footer_lower">
+        <div class="footer_lower_wrapper">
+            
+            <div>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-item"><img src="templates/<?php echo $this->template ?>/icons/facebook.svg" alt="facebook"></a>
+                    <a href="#" class="footer__social-item"><img src="templates/<?php echo $this->template ?>/icons/instagram.svg" alt="instagram"></a>
+                    <a href="#" class="footer__social-item"><img src="templates/<?php echo $this->template ?>/icons/pinterest.svg" alt="pinterest"></a>
+                </div> -->
+                <!-- <div class="footer_social">
+                    <a href="#" class="footer_lower__social_item">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer_lower__social_item">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="footer_lower__social_item">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="footer_lower__social_item">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div> -->
+            <!-- </div>
+            <div>
+                <div class="footer_lower__links">
+                    <div class="footer_lower__links_main">
+                        <a href="#">на главную</a>
+                        <a href="#">города</a>
+                        <a href="#">для водителей</a>
+                    </div>
+                    <div class="footer_lower__links_sub">
+                        <a href="#">центр поддержки</a>
+                        <a href="#">вакансии</a>
+                        <a href="#">разработчики</a>
+                        <a href="#">блог</a>
+                        <a href="#">о нас</a>
+                    </div>
+                    <a href="#" class="footer_lower__links_lang">Русский</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer_lower__mobile">
+                    <a href="#">
+                    <img src="templates/<?php echo $this->template ?>/img/app_store.png" alt="App Store">
+                    </a>
+                    <a href="#">
+                    <img src="templates/<?php echo $this->template ?>/img/google_play.png" alt="Google play">
+                    </a>
+                    <a href="#">
+                    <img src="templates/<?php echo $this->template ?>/img/windows_store.png" alt="Windows store">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <div class="overlay">
         <div class="modal" id="consultation">
@@ -575,8 +595,12 @@ $this->setGenerator(null); //отключили мета-тег generator
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 
-    <script src="js/script.js"></script>
+    
 
+
+    <script src="templates/<?php echo $this->template ?>/js/script.js"></script>
+
+    <script src="templates/<?php echo $this->template ?>/js/script_test.js"></script>
 	
 </body>
 </html>

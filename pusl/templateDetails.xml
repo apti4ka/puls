@@ -22,7 +22,11 @@
 	</files>
 
 	<positions>
-		<position>breadcrumbs</position>
+		<position>Breadcrumbs</position>
+		<position>promo</position>
+		<position>advantages</position>
+		<position>consultation</position>
+		<position>reviews</position>
 		<position>sidebar</position>
 		<position>menu</position>
 		<position>footer</position>

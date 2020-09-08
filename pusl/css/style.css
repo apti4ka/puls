@@ -303,7 +303,7 @@ nav {
   background: url("../img/consultation.jpg") center center/cover no-repeat; }
   .consultation__descr {
     margin-top: 80px;
-    color: #ffffff;
+    color: red;
     font-size: 20px;
     font-weight: 500; }
   .consultation .error {
@@ -767,4 +767,5 @@ figcaption {
 
 #consultaion, #order, #thanks {
   display: none; }
+
 /*# sourceMappingURL=style.css.map */

@@ -209,7 +209,7 @@ nav {
     font-size: 18px;
     font-weight: 300; }
     .header__phone:hover {
-      color: #fff;
+      color: red;
       text-decoration: none; }
   .header__contacts {
     display: -webkit-box;
@@ -303,7 +303,7 @@ nav {
   background: url("../img/consultation.jpg") center center/cover no-repeat; }
   .consultation__descr {
     margin-top: 80px;
-    color: red;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 500; }
   .consultation .error {

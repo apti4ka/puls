@@ -174,7 +174,7 @@ $this->setGenerator(null); //отключили мета-тег generator
     <?php endif; ?>
 
 
-
+    <?php if($this->countModules('carousel')):?>
     <section class="carousel">
         <div class="container">
 
@@ -218,14 +218,17 @@ $this->setGenerator(null); //отключили мета-тег generator
         
         <!-- </div>-->
     </section>
+    <?php endif; ?>
 
-    <!-- <section class="catalog">
+    <?php if($this->countModules('catalog')):?>
+    <section class="catalog">
         <div class="container container_catalog">
-            <h2 class="title">Каталог пульсометров</h2>
+            <h2 class="title">Виды массажа</h2>
             <ul class="catalog__tabs">
-                <li class="catalog__tab catalog__tab_active"><div>Для фитнеса</div></li>
-                <li class="catalog__tab"><div>для бега</div></li>
-                <li class="catalog__tab"><div>для триатлона</div></li>
+                <li class="catalog__tab catalog__tab_active"><div>Популярные</div></li>
+                <li class="catalog__tab"><div>Классический</div></li>
+                <li class="catalog__tab"><div>Атицеллюлитный</div></li>
+                <li class="catalog__tab"><div>Расслабляющий</div></li>
             </ul>
                 <div class="catalog__content catalog__content_active">
                     <div class="catalog-item">
@@ -460,7 +463,8 @@ $this->setGenerator(null); //отключили мета-тег generator
                 </div>
               
         </div>
-    </section> -->
+    </section>
+    <?php endif; ?>
 
     <?php if($this->countModules('reviews')):?>
     <section class="reviews">
@@ -599,7 +603,6 @@ $this->setGenerator(null); //отключили мета-тег generator
 
 
     <script src="templates/<?php echo $this->template ?>/js/script.js"></script>
-
     <script src="templates/<?php echo $this->template ?>/js/script_test.js"></script>
 	
 </body>

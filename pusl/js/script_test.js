@@ -1,9 +1,9 @@
 $(document).ready(function(){
-        $('.carousel__inner').slick({
+    $('.carousel__inner').slick({
         speed: 1200,
         adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.svg"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="icons/right.svg"></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="http://massage-22/templates/pusl/icons/left.svg" alt="slide"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="http://massage-22/templates/pusl/icons/right.svg"></button>',
         responsive: [
             {
                 breakpoint: 992,
@@ -16,17 +16,17 @@ $(document).ready(function(){
     });
     
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
-        $(this)
+        jQuery(this)
           .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
-          .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
+          .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq(jQuery(this).index()).addClass('catalog__content_active');
     });
 
     function toggleSlide(item) {
         $(item).each(function(i) {
             $(this).on('click', function(e) {
                 e.preventDefault();
-                $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-                $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+                jQuery('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+                jQuery('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
             })
         });
     };
@@ -36,16 +36,16 @@ $(document).ready(function(){
         // Modal
 
     $('[data-modal=consultation]').on('click', function() {
-        $('.overlay, #consultation').fadeIn('slow');
+        jQuery('.overlay, #consultation').fadeIn('slow');
     });
     $('.modal__close').on('click', function() {
-        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+        jQuery('.overlay, #consultation, #thanks, #order').fadeOut('slow');
     });
 
     $('.button_mini').each(function(i) {
         $(this).on('click', function() {
-            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-            $('.overlay, #order').fadeIn('slow');
+            jQuery('#order .modal__descr').text(jQuery('.catalog-item__subtitle').eq(i).text());
+            jQuery('.overlay, #order').fadeIn('slow');
         })
     });
 

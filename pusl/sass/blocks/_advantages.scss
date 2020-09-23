@@ -12,6 +12,9 @@
         flex-direction: column;
         align-items: center;
         max-width: 238px;
+        &__price_policy {
+            max-width: 220px;
+        }
     }
     &__subtitle {
         margin-top: 38px;
@@ -29,5 +32,11 @@
             color: #ff0000;
             text-decoration: underline;
         }
+        &__list_background_white{
+            background-color: #fff;
+            margin: 5px;
+            padding: 5px 0px;
+        }
     }
+
 }

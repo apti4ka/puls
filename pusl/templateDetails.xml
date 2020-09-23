@@ -24,10 +24,13 @@
 	<positions>
 		<position>Breadcrumbs</position>
 		<position>promo</position>
+		<position>header_cap</position>
+		<position>about</position>
 		<position>advantages</position>
 		<position>consultation</position>
 		<position>carousel</position>
 		<position>catalog</position>
+		<position>price_policy</position>
 		<position>reviews</position>
 		<position>sidebar</position>
 		<position>menu</position>

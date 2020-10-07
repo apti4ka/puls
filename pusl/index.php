@@ -4,6 +4,7 @@ $this->setGenerator(null); //отключили мета-тег generator
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
+<link rel="shortcut icon" href="templates/<?php echo $this->template ?>/icons/favicon.ico" type="image/x-icon">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <!--[if lt IE 9]>
@@ -11,10 +12,15 @@ $this->setGenerator(null); //отключили мета-тег generator
 <![endif]-->
 <jdoc:include type="head" />
 
-<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/bootstrap-reboot.min.css">
-<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/bootstrap-grid.min.css">
-<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/font.css">
-<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/slick.css">
+
+<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/bootstrap-reboot.min.css" type="text/css" />
+<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/bootstrap-grid.min.css" type="text/css" /> 
+<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/font.css" type="text/css" />
+
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/slick.css" type="text/css" />
 
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css"> -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
@@ -26,7 +32,7 @@ $this->setGenerator(null); //отключили мета-тег generator
 
 <body id="page">
 	
-    <section class="header_menu">
+    <section id="up" class="header_menu">
 
         <nav id="menu" class="top-menu" onclick="this.className = (this.className == 'topmenu' ? 'mobilemenu' : 'topmenu')"> 
 			<jdoc:include type="modules" name="menu" style="none" />
@@ -1014,9 +1020,14 @@ $this->setGenerator(null); //отключили мета-тег generator
 
     </div>
 
+   
+    <a href="#up" class="pageup">
+        <img src="templates/<?php echo $this->template ?>/icons/up.svg" alt="up">
+    </a>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="templates/<?php echo $this->template ?>/js/wow.min.js"></script>
     <script src="templates/<?php echo $this->template ?>/js/slick.min.js"></script>
     <script src="templates/<?php echo $this->template ?>/js/jquery.validate.min.js"></script>
     <script src="templates/<?php echo $this->template ?>/js/jquery.maskedinput.min.js"></script>
@@ -1029,7 +1040,7 @@ $this->setGenerator(null); //отключили мета-тег generator
     
 
 
-    <script src="templates/<?php echo $this->template ?>/js/script.js"></script>
+    <!-- <script src="templates/<?php echo $this->template ?>/js/script.js"></script> -->
     <script src="templates/<?php echo $this->template ?>/js/script_test.js"></script>
 	
 </body>

@@ -15,7 +15,7 @@
     max-width: 950px;
     margin: 0 auto;
     &_catalog {
-        max-width: 970px;
+        max-width: 990px;
     }
 }
 
@@ -38,3 +38,4 @@
 @import 'blocks/footer_lower';
 @import 'blocks/media';
 @import 'blocks/modal';
+@import 'blocks/pageup';

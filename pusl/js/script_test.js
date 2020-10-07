@@ -82,4 +82,42 @@ $(document).ready(function(){
 
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        jQuery(function($) {
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: jQuery(this).serialize()
+        }).done(function() {
+            jQuery(this).find("input").val("");
+            jQuery('#consultation, #order').fadeOut();
+            jQuery('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+    });
+        return false;
+    });
+
+
+    // Smooth scroll and pageup
+
+    $(window).scroll(function() {
+        if (jQuery(this).scrollTop() > 1600) {
+            jQuery('.pageup').fadeIn();
+        } else {
+            jQuery('.pageup').fadeOut();
+        }
+    });
+
+    $("a[href=#up]").click(function(){
+        const _href = jQuery(this).attr("href");
+        jQuery("html, body").animate({scrollTop: jQuery(_href).offset().top+"px"});
+        return false;
+    });
+
+    new WOW().init();
+
 });

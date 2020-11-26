@@ -18,6 +18,7 @@ $this->setGenerator(null); //отключили мета-тег generator
 <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/font.css" type="text/css" />
 
 
+
 <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet"> -->
 
 <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/slick.css" type="text/css" />
@@ -31,12 +32,149 @@ $this->setGenerator(null); //отключили мета-тег generator
 </head>
 
 <body id="page">
+
+<?php if($this->countModules('header')):?>
+<section  id="up" class="header">
+            
+    <nav id="menu" class="top-menu" onclick="this.className = (this.className == 'top-menu' ? 'mobilemenu' : 'top-menu')"> 
+        <div class="top-menu_mob">
+            Меню
+        </div>
+           
+        <div class="mobilemenu_mob">
+            Профессиональный массаж
+        </div> 
+                
+            <!-- <div class="header__container__menu"> -->
+                <jdoc:include type="modules" name="menu" style="none" />
+                    <div class="container">
+                    </div>
+            <!-- </div> -->
+
+                <!-- </nav> -->
+    </nav>
+            
+                    <div class="header__subheader">
+                            <div class="row header__subheader__row">
+                                <div class="col-3 col-xl-2 col-lg-3 col-md-2 col-sm-7 offset-1 offset-xl-1 offset-lg-0 offset-md-0 offset-sm-0">
+                                    <a href="/" class="header__subheader__logo">
+                                        <img src="templates/<?php echo $this->template ?>/icons/logo/sokolov_logo-300.png" alt="logo">
+                                    </a>
+                                    <a href="/" class="header__subheader__logo__mob">
+                                        <img src="templates/<?php echo $this->template ?>/icons/logo/logo_sokolov_200x272.png" alt="logo">
+                                    </a>
+                                </div>
+                            
+                                <div class="col-1 col-xl-6 col-lg-6 col-md-6 col-sm-1 offset-0 offset-xl-0 offset-lg-0 offset-md-1 offset-sm-0">
+                                    <div class="header__subheader__official">
+                                        Профессиональный массаж в Барнауле
+                                        <span>Адрес: ул. Никтина 92, г. Барнаул</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-5 col-xl-3 col-lg-3 col-md-3 col-sm-4  offset-0 offset-xl-0 offset-lg-0 offset-md-0 offset-sm-0">
+                                    <div class="header__subheader__contacts">
+                                        <a href="tel:+79132503879" class="header__subheader__phone header__subheader__phone__mob">+7 (913) 250-38-79</a>
+                                        <button data-modal="consultation" class="button">заказать звонок</button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+     
+</section>
+<?php endif; ?>
+
+
+
+
+<?php if($this->countModules('carousel')):?>
+    <!-- <section class="carousel">
+        <div class="carousel__container">
+
+            <div class="carousel__inner">
+                <div>
+                    <img src="templates/<?php echo $this->template ?>/images/services/type-massage/facial-massage/facial-massage/VIT_2402_1600x500_slide.jpg" alt="slide">
+                </div>
+                <div>
+                    <img src="templates/<?php echo $this->template ?>/images/services/type-massage/anti-cellulite-massage/anti-cellulite-massage/massage22_001_VIT_2297_1600x500_slide.jpg" alt="slide">
+                </div>
+                <div>
+                    <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/back_massage/massage22_006_VIT_2276_1600x500_slide.jpg" alt="slide">
+                </div>
+            </div>
+
+
+            <!-- <button type="button" class="prev"><img src="icons/left.svg"></button>
+            <button type="button" class="next"><img src="icons/right.svg"></button> -->
+        
+            <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/slide_1.jpg" alt="slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/slide_2.jpg" alt="slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/slide_3.jpg" alt="slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"><button type="button" class="prev"><img src="icons/left.svg"></button></span>
+                    <span class="sr-only">Назад</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"><button type="button" class="next"><img src="icons/right.svg"></button></span>
+                    <span class="sr-only">Вперед</span>
+                </a>
+              </div> -->
+        
+        </div> 
+    </section> 
+    <?php endif; ?>
+
+        
+
+              
+
+<!-- <section  id="up" class="header_cap">
+
+                <div class="container_header">
+
+                    <header class="header1">
+                        <a href="/" class="header1__logo">
+                            <img src="templates/<?php echo $this->template ?>/icons/logo/sokolov_logo-300.png" alt="logo">
+                        </a>
+                        <div class="header1__official">
+                            Профессиональный массаж в Барнауле
+                            <span>Адрес: ул. Никтина 92, г. Барнаул</span>
+                        </div>
+                        <div class="header1__contacts">
+                            <a href="tel:+79132503879" class="header1__phone">+7 (913) 250-38-79</a>
+                            <button data-modal="consultation" class="button">заказать звонок</button>
+                        </div>
+                    </header>
+
+
+                    <nav id="menu" class="top-menu" onclick="this.className = (this.className == 'topmenu' ? 'mobilemenu' : 'topmenu')"> 
+                        <jdoc:include type="modules" name="menu" style="none" />
+                        <div class="container">
+                        </div>
+                    </nav>	
+
+                </div>
+     
+    </section>	 -->
 	
+    <!-- 
+        
+    
     <section id="up" class="header_menu">
 
         <nav id="menu" class="top-menu" onclick="this.className = (this.className == 'topmenu' ? 'mobilemenu' : 'topmenu')"> 
 			<jdoc:include type="modules" name="menu" style="none" />
-			
+		
             <div class="container">
             
             </div>
@@ -48,9 +186,9 @@ $this->setGenerator(null); //отключили мета-тег generator
             </div>
         </nav>		
      
-    </section>	
+    </section>	 -->
     
-    <?php if($this->countModules('promo')):?> 
+    <!-- <?php if($this->countModules('promo')):?> 
     <section class="promo">
     <div class="promo__header_wrapper">
         <div class="promo__container_wrapper">
@@ -96,37 +234,16 @@ $this->setGenerator(null); //отключили мета-тег generator
                     </div>
                     <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
                     <div class="promo__link">
-                        или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+                        или <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     </section>
-    <?php endif; ?>                
+    <?php endif; ?>                 -->
 
-    <!-- <?php if($this->countModules('header_cap')):?>
-    <section class="header_cap">
-    <div class="container">
-            <header class="header">
-                <a href="/" class="header__logo">
-                    <img src="templates/<?php echo $this->template ?>/icons/logo/sokolov_logo-300.png" alt="logo">
-                </a>
-                <div class="header__official">
-                    Профессиональный массаж в Барнауле
-                    <span>Адрес: ул. Никтина 92, г. Барнаул</span>
-                </div>
-                <div class="header__contacts">
-                    <a href="tel:+79132503879" class="header__phone">+7 (913) 250-38-79</a>
-                    <button data-modal="consultation" class="button">заказать звонок</button>
-                </div>
-            </header>
-        
-        </div>
-    </section>
-    <?php endif; ?> -->
-
-
+   
     <section class="content">
         <div class="container">
             <?php if($this->countModules('breadcrumbs')):?>
@@ -140,7 +257,47 @@ $this->setGenerator(null); //отключили мета-тег generator
     </section>
 
 
-    <?php if($this->countModules('about')):?>
+
+    <!-- <?php if($this->countModules('forms-new')):?>
+    <section class="forms-new">
+        <wraaper>
+            <div class="dws-wraaper">
+                <input type="checkBox" name="toggle" id="dws-form-new" class="toggleForm-new">
+                <div class="dws-container">
+                    <label for="dws-form-new" class="toggleForm-new"><i class="fa fa-question-circle"></i>Задать вопрос</label>
+                    <form class="formBox">
+                        <div class="inputBox">
+                            <label class="labelText">Ваше имя:</label>
+                            <input type="text" class="userInput" required>
+                        </div>
+                        <div class="inputBox">
+                            <label class="labelText">E-mail:</label>
+                            <input type="e-mail" class="userInput" required>
+                        </div>
+                   
+                        <div class="inputBox">
+                            <label class="labelText">Номер телефона:</label>
+                            <input type="text" class="userInput" required pattern="\d+">
+                        </div>
+                        <div class="inputBox">
+                            <label class="labelText">Сообщение:</label>
+                            <textarea class="userInput" required></textarea>
+                        </div>
+                        <div class="inputBox">
+                            <input type="checkBox" required>
+                            <label class="personalDoc">Я согласе а обработку моих <a href="#">персональных данных</a>:</label>
+                        </div>
+                        <input type="submit" value="Отправить" class="button">
+                    </form>
+                </div>
+            </div>
+        <wraaper>
+    </section> 
+<?php endif; ?> -->
+
+<!-- Начало: Новая верся Section about -->
+
+<?php if($this->countModules('about')):?>
     <section class="about">
         <div class="container">
            
@@ -152,38 +309,37 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="about__subtitle">
                     Добро пожаловать на массаж!
                     </div>
-                    <div class="about__descr">
-                    <iframe width="470" height="315" src="https://www.youtube.com/embed/ksQ-a92sf9s" frameborder="0"        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+                    <div class="about__descr about__descr_youtube">
+                    <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ksQ-a92sf9s" frameborder="0"        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe> -->
                     </div>
-                    <button class="button">Подробнее</button>
+                    <button class="button button__about_youtube"><a href="/photos-videos">Подробнее</a></button>
                 </div>
 
                 <div class="about__item">
                     <div class="about__subtitle">
                     Дорогие друзья! Приветствую вас на моем сайте!
                     </div>
-                    <div class="about__descr">Меня зовут Александр Соколов. За одиннадцать лет провел более 15 700 часов работая над красотой и здоровьем клиентов. Помог свыше 7800 клиентам.
+                    <div class="about__descr">Меня зовут Александр Соколов. За двенадцать лет провел более 15 700 часов работая над красотой и здоровьем клиентов. Помог свыше 7800 клиентам.
                             <br><br>
                             Массаж нужен каждому здоровому человеку, а не только тем, кому назначил врач. Особенно массаж рекомендован офисным работникам, спортсменам, молодым мамам и каждому человеку, который хочет быть здоровым. 
                             <br><br>
                             Чем отличаюсь от других специалистов? 
                             <br><br>
                             Для меня важен результат. Когда человек приходит на массаж со своими проблемами, то моя цель за короткий промежуток времени добиться максимального улучшения.
-                            <br>
+                            <br><br>
                             Эффект от массажа. Вы можете оценивать результат массажа по сброшенным сантиметрам, по легкости в теле и хорошему настроению.
+                            <br><br>
+                            <img src="templates/<?php echo $this->template ?>/images/services/ukrasheniya/about_avatar.jpg" alt="about">
                             
+                            <strong>Мы находимся по адресу:</strong>
                             <br><br>
-                            Мы находимся по адресу:
-                            <br><br>
+                            
                             г. Барнаул, ул. Никитина 92, 1 подъезд
                             <br>
-                            Студия массажа Александра Соколова!
-                            <br><br>
                             
-                            <img src="templates/<?php echo $this->template ?>/images/services/ukrasheniya/avatare_01.png" alt="about">
-
-                            <br><br>                            
-                            <button class="button">Подробнее</button>
+                            Студия массажа Александра Соколова!
+                                                       
+                            <button class="button button__about"><a href="/about_studio">Подробнее</a></button>
                     </div>
                 </div>
                 
@@ -193,6 +349,7 @@ $this->setGenerator(null); //отключили мета-тег generator
     </section>    
     <?php endif; ?>
 
+<!-- Конец: Новая верся Section about -->
 
 
     <?php if($this->countModules('advantages')):?>            
@@ -235,7 +392,7 @@ $this->setGenerator(null); //отключили мета-тег generator
     <?php endif; ?>
 
     <?php if($this->countModules('consultation')):?>
-    <section class="consultation">
+    <!-- <section class="consultation">
         <div class="container">
             <h2 class="title title_left">
                 Получите бесплатную консультацию<br>
@@ -253,7 +410,7 @@ $this->setGenerator(null); //отключили мета-тег generator
                 <button class="button button_submit">Заказать консультацию</button>
             </form>
         </div>
-    </section>
+    </section> -->
     <?php endif; ?>
 
 
@@ -300,29 +457,41 @@ $this->setGenerator(null); //отключили мета-тег generator
               </div> -->
         
         <!-- </div>-->
-    </section>
+    </>
     <?php endif; ?>
 
 <!-- Каталог виды массажа -->
 
     <?php if($this->countModules('catalog')):?>
-    <section class="catalog">
+    <section id="catalog" class="catalog">
         <div class="container container_catalog">
             <h2 class="title">Виды массажа</h2>
-            <ul class="catalog__tabs">
+            <ul class="catalog__tabs catalog__tabs__mob">
                 <li class="catalog__tab catalog__tab_active"><div>Популярные</div></li>
                 <li class="catalog__tab"><div>Классический</div></li>
                 <li class="catalog__tab"><div>Атицеллюлитный</div></li>
                 <li class="catalog__tab"><div>Расслабляющий</div></li>
             </ul>
+
+            <!-- <ul class="catalog__tabs__mob">
+                <li class="catalog__tab catalog__tab_active"><div>Популярные</div></li>
+                <li class="catalog__tab"><div>Классический</div></li>
+                <li class="catalog__tab"><div>Атицеллюлитный</div></li>
+                <li class="catalog__tab"><div>Расслабляющий</div></li>
+            </ul> -->
+
+
+
                 <div class="catalog__content catalog__content_active">
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/massaj_lica/VIT_2402_1600x900_b.jpg" alt="Массаж лица" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Массаж лица</div>
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/facial-massage/facial-massage/VIT_2402_200x200_s.jpg" alt="Массаж лица - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle wow">Массаж лица</div>
                                 <div class="catalog-item__descr">Решает проблему возрастных изменений на лице. Альтернатива хирургических вмешательств и постановка инъекций красоты.</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <!-- Подробнее смещение в карточке товара на главной-->
+                                <!-- <a href="#" class="catalog-item__link__links">ПОДРОБНЕЕ</a> -->
+                                <a href="../type-massage/facial-massage/myofascial-massage-face/" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -344,17 +513,17 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/antitsellyulitnyj-massazh/massage22_001_VIT_2297_1600x900_b.jpg" alt="Атцеллюлитный массаж" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Атцеллюлитный массаж</div>
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/anti-cellulite-massage/anti-cellulite-massage/massage22_001_VIT_2297_200x200_s.jpg" alt="Антицеллюлитный массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Антицеллюлитный массаж</div>
                                 <div class="catalog-item__descr">Эффективный спрособ умеьшить лиший объем, придать тонус мышцам, подтянуть кожу.</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../type-massage/anti-cellulite-massage/anti-cellulite-massage/" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
                                 <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                                 <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                                 <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                                <a href="#" class="catalog-item__back">Назад</a>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                         </div>
                         <hr>
@@ -369,10 +538,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/spiny/massage22_006_VIT_2276_1600x900_b.jpg" alt="pulsometr" class="catalog-item__img">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/back_massage/massage22_006_VIT_2276_200x200_s.jpg" alt="Массаж спины - каталог" class="catalog-item__img">
                                 <div class="catalog-item__subtitle">Массаж спины</div>
                                 <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../type-massage/classical-massage/back_massage/" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -385,33 +554,8 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
-                            </div>
-                            <button class="button button_mini">КУПИТЬ</button>
-                        </div>
-                    </div>
-                    <!-- <div class="catalog-item">
-                        <div class="catalog-item__wrapper">
-                            <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                            </div>
-                            <div class="catalog-item__list">
-                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                                <a href="#" class="catalog-item__back">Назад</a>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="catalog-item__footer">
-                            <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <div class="catalog-item__olde_price">1 000 руб.</div>
+                                <div class="catalog-item__price"> 900 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
@@ -419,10 +563,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/baby_massage/massage22_kab_8035_200x200_s.jpg" alt="Детскй массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Детскй массаж</div>
+                                <div class="catalog-item__descr">Позволяет решать проблемы осанки, убирает гипертонус или гипотонус мышц.</div>
+                                <a href="../massage-22/type-massage/baby_massage/" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -435,46 +579,46 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <div class="catalog-item__olde_price">1 000 руб.</div>
+                                <div class="catalog-item__price"> 800 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
                     </div>
-                    <div class="catalog-item">
-                        <div class="catalog-item__wrapper">
-                            <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                            </div>
-                            <div class="catalog-item__list">
-                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                                <a href="#" class="catalog-item__back">Назад</a>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="catalog-item__footer">
-                            <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
-                            </div>
-                            <button class="button button_mini">КУПИТЬ</button>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="catalog__content">
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/obschiy_klassicheskiy_massaj/massage22_001_VIT_2279_200x200_s.jpg" alt="Общий массаж тела классический - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Общий массаж тела классический</div>
+                                <div class="catalog-item__descr">Снимает напряжение и усталость в теле. Приводит мышцы в тонус. </div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/massage_pregnancy/massazh-pri-beremennosti_0165_massage22_200x200_s.jpg" alt="Массаж при беременности - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж при беременности</div>
+                                <div class="catalog-item__descr">Решает проблему болей в шеи, в спине, в руках, убирает отек в ногах.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -487,8 +631,208 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/head_massage/massage22_6903_200x200_s.jpg" alt="Массаж головы - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж головы</div>
+                                <div class="catalog-item__descr">За короткое время устраняет головную боль, снимает стресс, убирает физическую и психологическую усталость.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price"> 800 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/neck_collar_massage/massage22_001_VIT_2251_200x200_s.jpg" alt="Массаж шейно-воротниковой зоны - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж шейно-воротниковой зоны</div>
+                                <div class="catalog-item__descr">Позволяет снять дискомфорт в области шеи и плеч (шейный остиохондроз).</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">800 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/back_massage/massage22_006_VIT_2276_200x200_s.jpg" alt="Массаж спины - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж спины</div>
+                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <div class="catalog-item__olde_price">1 000 руб.</div>
+                                <div class="catalog-item__price"> 900 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/breast_massage/breast_massage_001_massage22_200x200_s.jpg" alt="Массаж груди - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж груди</div>
+                                <div class="catalog-item__descr">Массаж улучшает форму, повышает тонус и упругость груди. Профилактика кист и мастопатии</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">800 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/abdominal_massage/massage22_7071_200x200_s.jpg" alt="Массаж живота - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж живота</div>
+                                <div class="catalog-item__descr">Снимает напряжение и усталость в теле. Приводит мышцы в тонус. </div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/lower_back_massage/massage22_001_VIT_2236_200x200_s.jpg" alt="Массаж поясицы - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж поясицы</div>
+                                <div class="catalog-item__descr">Снимает мышечные спазмы, избавляет от боли в пояснице, исправляет дефекты в походке.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">800 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/hand_massage/massage22_7068_200x200_s.jpg" alt="Массаж рук и кистей - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж рук и кистей</div>
+                                <div class="catalog-item__descr">Снимет проявления онимения рук, тянущюю, ноющюю боль в руках, периодически отдающюю в пяльцы рук.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">800 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/classical_massage/foot_massage/massage22_001_VIT_2325_200x200_s.jpg" alt="Общий массаж тела классически - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж ног</div>
+                                <div class="catalog-item__descr">Снимает болевые ощущения в ногах, решает проблему чувства тянущих, ноющих, отекших ног.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
@@ -498,11 +842,11 @@ $this->setGenerator(null); //отключили мета-тег generator
                 <div class="catalog__content">
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
-                            <div class="catalog-item__content  catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/anti-cellulite-massage/anti-cellulite-massage/massage22_001_VIT_2297_200x200_s.jpg" alt="Антицеллюлитный массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Антицеллюлитный массаж</div>
+                                <div class="catalog-item__descr">Эффективный и быстрый способ избавления от визуальных и тактильных проблем, неровностей кожи, лишних объемов в проблемных зонах.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -515,19 +859,19 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
                     </div>
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
-                            <div class="catalog-item__content  catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/anti-cellulite-massage/lymphatic_drainage_massage/massage22_001_VIT_2333_200x200_s.jpg" alt="Лимфодренажный массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Лимфодренажный массаж</div>
+                                <div class="catalog-item__descr">Массаж устраняет застойные явления (отеки), способствует ввыведению из оргаизма токсов.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -540,8 +884,108 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/anti-cellulite-massage/massage_after_childbirth/massage22_posle_rodov_200x200_s.jpg" alt="Массаж после родов - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж после родов</div>
+                                <div class="catalog-item__descr">Облегчает выход из послеродовой дипресси. Помогает скорейшему восстановлению организма в целом и его отдельных функций в частности.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/anti-cellulite-massage/abdominal_massage_men/abdominal_massage_men_200x200_s.jpg" alt="Массаж живота для мужчин - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж живота для мужчин</div>
+                                <div class="catalog-item__descr">Убирает лишний объем живота, боков, подтягивается кожа, приводит мышцы в тонус.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/anti-cellulite-massage/honey_massage/honey-massage_200x200_s.jpg" alt="Медовый массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Медовый массаж</div>
+                                <div class="catalog-item__descr">Эффективен против целлюлита. Помогает организму вывести шлаки, улучшить тонус самой кожи</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/anti-cellulite-massage/cupping_massage/cupping-massage_200x200_s.jpg" alt="Баночный массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Баночный массаж</div>
+                                <div class="catalog-item__descr">Снимает болевые ощущения в ногах, решает проблему чувства тянущих, ноющих, отекших ног.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
@@ -551,11 +995,11 @@ $this->setGenerator(null); //отключили мета-тег generator
                 <div class="catalog__content">
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
-                            <div class="catalog-item__content  catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/relaxing-massage/general-massage-relaxing/massage22_001_VIT_2259_200x200_s.jpg" alt="Общий массаж расслабляющий - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Общий массаж расслабляющий</div>
+                                <div class="catalog-item__descr">Снимает физическое и эмоцональное напряжение, расслабляет мышцы, нормализуется кровообращение.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -568,19 +1012,19 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
                     </div>
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
-                            <div class="catalog-item__content  catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                                <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/relaxing-massage/stone-therapy/massage22_7202_200x200_s.jpg" alt="Массаж горячими камнями - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Массаж горячими камнями</div>
+                                <div class="catalog-item__descr">Горячий и эффективный массаж. Человек погружается в состояния глубочайшего расслабления, который снимает стресс.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -593,12 +1037,113 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
                     </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/relaxing-massage/fire-massage/massage22_001_fire-massage_IMG_2356_200x200_s.jpg" alt="Огненный массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Огненный массаж</div>
+                                <div class="catalog-item__descr">Во время массажа вы испытаете бурю эмоций, а в конце расслабление. Эксклюзивный, расслабляющий подарок для своим близким и друзей.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/relaxing-massage/spanish-massage/massage22_001_VIT_2281_200x200_s.jpg" alt="Испанский массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Испанский массаж</div>
+                                <div class="catalog-item__descr">Массаж погрузит вас в состояние максимальной расслабленности. Мышцы станут мягкими, эластичными.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/relaxing-massage/thai-foot-massage/massage22_001_VIT_2319_200x200_s.jpg" alt="Тайский массаж стоп - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Тайский массаж стоп</div>
+                                <div class="catalog-item__descr">Безумно приятный и расслабляющий массаж. Снимает напряжение стоп и ног.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-item__wrapper">
+                            <div class="catalog-item__content catalog-item__content_active">
+                                <img src="templates/<?php echo $this->template ?>/images/services/type-massage/relaxing-massage/thai_hand_massage/massage22_7060_200x200_s.jpg" alt="Тайский массаж кистей - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Тайский массаж кистей</div>
+                                <div class="catalog-item__descr">Повышает чувствительность рук, делает их нежными, мягкими, изящными.</div>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
+                            </div>
+                            <div class="catalog-item__list">
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="#" class="catalog-item__back">Назад</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <!-- <div class="catalog-item__olde_price">4 750 руб.</div> -->
+                                <div class="catalog-item__price">1 000 руб.</div>
+                            </div>
+                            <button class="button button_mini">КУПИТЬ</button>
+                        </div>
+                    </div>
+                    
                 </div>
               
         </div>
@@ -611,19 +1156,19 @@ $this->setGenerator(null); //отключили мета-тег generator
     <section class="catalog">
         <div class="container container_catalog">
             <h2 class="title">Дополнительные услуги</h2>
-            <ul class="catalog__tabs">
-                <li class="catalog__tab catalog__tab_services catalog__tab_active"><div>Массажные программы</div></li>
-                <li class="catalog__tab catalog__tab_services"><div>Подарочные сертификаты</div></li>
-                <li class="catalog__tab catalog__tab_services"><div>Выезд массажиста на дом</div></li>
+            <ul class="catalog__tabs catalog__tabs__mob">
+                <li class="catalog__tab catalog__tab__mob catalog__tab_services  catalog__tab_active"><div>Массажные программы</div></li>
+                <li class="catalog__tab catalog__tab__mob catalog__tab_services"><div>Подарочные сертификаты</div></li>
+                <li class="catalog__tab catalog__tab__mob catalog__tab_services"><div>Выезд массажиста на дом</div></li>
             </ul>
                 <div class="catalog__content catalog__content_active">
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/program/You-Drop-Kilos-1132x509.jpg" alt="Массаж лица" class="catalog-item__img">
+                                <img src="templates/<?php echo $this->template ?>/images/services/program/perfect_body_200x200_s.jpg" alt="Идеальное тело - каталог" class="catalog-item__img">
                                 <div class="catalog-item__subtitle">Идеальное тело</div>
                                 <div class="catalog-item__descr">Решает проблему возрастных изменений на лице. Альтернатива хирургических вмешательств и постановка инъекций красоты.</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -636,8 +1181,8 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">1 500 руб.</div>
-                                <div class="catalog-item__price">1 300 руб.</div>
+                                <div class="catalog-item__olde_price">15 000 руб.</div>
+                                <div class="catalog-item__price">13 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
@@ -645,10 +1190,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/program/shutterstock_81271474-1132x509.jpg" alt="Атцеллюлитный массаж" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Атцеллюлитный массаж VIP</div>
+                                <img src="templates/<?php echo $this->template ?>/images/services/program/vip_anti-cellulite_massage_001_200x200_s.jpg" alt="Атицеллюлитный массаж VIP - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Атицеллюлитный массаж VIP</div>
                                 <div class="catalog-item__descr">Эффективный спрособ умеьшить лиший объем, придать тонус мышцам, подтянуть кожу.</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -661,8 +1206,8 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">1 000 руб.</div>
-                                <div class="catalog-item__price">900 руб.</div>
+                                <div class="catalog-item__olde_price">14 000 руб.</div>
+                                <div class="catalog-item__price">12 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
@@ -670,10 +1215,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/program/strese.jpg" alt="pulsometr" class="catalog-item__img">
-                                <div class="catalog-item__subtitle">Массаж - Стоп стресс</div>
+                                <img src="templates/<?php echo $this->template ?>/images/services/program/stop_stress_massage_200x200_s.jpg" alt="Стоп стресс - массаж - каталог" class="catalog-item__img">
+                                <div class="catalog-item__subtitle">Стоп стресс - массаж</div>
                                 <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -686,8 +1231,8 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <div class="catalog-item__olde_price">15 000 руб.</div>
+                                <div class="catalog-item__price">13 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
@@ -695,10 +1240,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/program/dummy-8-1132x509.jpg" alt="pulsometr" class="catalog-item__img">
+                                <img src="templates/<?php echo $this->template ?>/images/services/program/massage_office_worker_200x200_s.jpg" alt="Массаж для офсного работника - каталог" class="catalog-item__img">
                                 <div class="catalog-item__subtitle">Массаж для офсного работника</div>
                                 <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -711,8 +1256,8 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <div class="catalog-item__olde_price">12 000 руб.</div>
+                                <div class="catalog-item__price">10 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
@@ -720,10 +1265,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/program/masaza-1132x509.jpg" alt="pulsometr" class="catalog-item__img">
+                                <img src="templates/<?php echo $this->template ?>/images/services/program/massage_athletes_200x200_s.jpg" alt="Массаж для спортсменов - каталог" class="catalog-item__img">
                                 <div class="catalog-item__subtitle">Массаж для спортсменов</div>
                                 <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -747,10 +1292,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/podarochnyj-sertifikat/podarochnye-sertifikaty.jpg" alt="pulsometr" class="catalog-item__img">
+                                <img src="templates/<?php echo $this->template ?>/images/services/gift_certificate/gift_certificate_200x200_s.jpg" alt="Подарочный сертифкат - каталог" class="catalog-item__img">
                                 <div class="catalog-item__subtitle">Подарочный сертифкат</div>
                                 <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -763,8 +1308,8 @@ $this->setGenerator(null); //отключили мета-тег generator
                         <hr>
                         <div class="catalog-item__footer">
                             <div class="catalog-item__prices">
-                                <div class="catalog-item__olde_price">4 750 руб.</div>
-                                <div class="catalog-item__price">4 500 руб.</div>
+                                <div class="catalog-item__olde_price"></div>
+                                <div class="catalog-item__price">От 1 000 руб.</div>
                             </div>
                             <button class="button button_mini">КУПИТЬ</button>
                         </div>
@@ -775,10 +1320,10 @@ $this->setGenerator(null); //отключили мета-тег generator
                     <div class="catalog-item">
                         <div class="catalog-item__wrapper">
                             <div class="catalog-item__content  catalog-item__content_active">
-                                <img src="templates/<?php echo $this->template ?>/images/services/vyezd-massazhista-na-dom/massage22_001_vyezd-massazhista-na-dom_900x600_b.jpg" alt="pulsometr" class="catalog-item__img">
+                                <img src="templates/<?php echo $this->template ?>/images/services/departure_masseur_home/massage22_001_departure_masseur_home_200x200_s.jpg" alt="Выезд массажиста на дом - каталог" class="catalog-item__img">
                                 <div class="catalog-item__subtitle">Выезд массажиста на дом</div>
                                 <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                                <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                                <a href="../" class="catalog-item__link__links">ПОДРОБНЕЕ</a>
                             </div>
                             <div class="catalog-item__list">
                                 <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
@@ -803,100 +1348,149 @@ $this->setGenerator(null); //отключили мета-тег generator
     </section>
     <?php endif; ?>    
 
-    <?php if($this->countModules('price_policy')):?>            
+
+<!-- Начало: Новая верся Section advantages -->
+<?php if($this->countModules('price_policy')):?>            
     <section class="advantages">
         <div class="container">
-            <h2 class="title">Ценовая политика</h2>
+            <h2 class="title advantages__title">Ценовая политика</h2>
             <div class="advantages__wrapper">
                 <div class="advantages__item advantages__item__price_policy">
                     <img src="templates/<?php echo $this->template ?>/icons/advantages/heart.png" alt="cup" class="advantages__icon">
                     <div class="advantages__subtitle">
-                        Массаж 30 минут <br> 800 руб.
+                        Массаж 30 минут
                     </div>
-                    <div class="advantages__descr">Ознакомительный массаж. Сокращенный вариант массажа.
-                        <div class="advantages__descr__list_background_white">
-                            Первичная консультация
+                    <div class="advantages__subtitle__price">
+                        800 руб.
+                    </div>
+                    <div class="advantages__descr">
+                        <div class="advantages__descr__top">
+                            Ознакомительный массаж. 
+                            <br>
+                            Сокращенный вариант массажа.
                         </div>
-                        <div>
-                            Знакомство с массажистом
-                        </div>
-                        <div class="advantages__descr__list_background_white">
-                            Сокращенный объем массажа
-                        </div>
-                        <div>
-                            Оценить технику массажа
-                        </div>
-                        <div class="advantages__descr__list_background_white">
-                            Оценка эффективности массажа
+                        <div class="advantages__descr__list_border">
+                            <div class="advantages__descr__list_background_white">
+                                Первичная консультация
+                            </div>
+                            <div class="advantages__descr__list_background">
+                                Знакомство с массажистом
+                            </div>
+                            <div class="advantages__descr__list_background_white">
+                                Сокращенный объем массажа
+                            </div>
+                            <div class="advantages__descr__list_background">
+                                Оценить технику массажа
+                            </div>
+                            <div class="advantages__descr__list_background_white">
+                                Оценка эффективности массажа
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="advantages__item advantages__item__price_policy">
                     <img src="templates/<?php echo $this->template ?>/icons/advantages/heart.png" alt="heart" class="advantages__icon">
                     <div class="advantages__subtitle">
-                        Массаж 60 минут <br> 1000 руб.
+                        Массаж 60 минут
                     </div>
-                    <div class="advantages__descr">Стандартный массаж. Выполняются все необходимые приемы в полном объеме. За это время     решаем основные, поставленные задачи. 
-                        <div class="advantages__descr__list_background_white">
-                            Подробная консультация
+                    <div class="advantages__subtitle__price">
+                        1000 руб.
+                    </div>
+                    <div class="advantages__descr">
+                        <div class="advantages__descr__top">
+                            Стандартный массаж. 
+                            <br>
+                            Выполняются все необходимые приемы в полном объеме. За это время     решаем основные, поставленные задачи. 
                         </div>
-                        <div>
-                            Полный объем массажа
-                        </div>
-                        <div class="advantages__descr__list_background_white">
-                            Гарантированный результат
+                        <div class="advantages__descr__list_border">    
+                            <div class="advantages__descr__list_background_white">
+                                Подробная консультация
+                            </div>
+                            <div class="advantages__descr__list_background">
+                                Полный объем массажа
+                            </div>
+                            <div class="advantages__descr__list_background_white">
+                                Гарантированный результат
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="advantages__item advantages__item__price_policy">
                     <img src="templates/<?php echo $this->template ?>/icons/advantages/heart.png" alt="shoe" class="advantages__icon">
                     <div class="advantages__subtitle">
-                    Массаж 90 минут <br> 1500 руб.
+                        Массаж 90 минут
                     </div>
-                    <div class="advantages__descr">Максимальный массаж. Направленный на достижение максимально полного результата, прорабатываются дополнительные рабочие зона.
-                        <div class="advantages__descr__list_background_white">
-                            Детальная консультация
+                    <div class="advantages__subtitle__price">
+                        1500 руб.
+                    </div>
+                    
+                    <div class="advantages__descr">
+                        <div class="advantages__descr__top">
+                            Максимальный массаж. 
+                            <br>
+                            Направленный на достижение максимально полного результата, прорабатываются дополнительные рабочие зона.
                         </div>
-                        <div>
-                            Полный объем массажа <br>
-                            +Дополнительная проработка
-                        </div>
-                        <div class="advantages__descr__list_background_white">
-                            Увеличенная эффективность
-                        </div>
-                        <div>
-                            Оценить технику массажа
-                        </div>
-                        <div class="advantages__descr__list_background_white">
-                            Гарантированный результат
+                        <div class="advantages__descr__list_border">    
+                            <div class="advantages__descr__list_background_white">
+                                Детальная консультация
+                            </div>
+                            <div class="advantages__descr__list_background">
+                                Полный объем массажа <br>
+                                +Дополнительная проработка
+                            </div>
+                            <div class="advantages__descr__list_background_white">
+                                Увеличенная эффективность
+                            </div>
+                            <div class="advantages__descr__list_background">
+                                Оценить технику массажа
+                            </div>
+                            <div class="advantages__descr__list_background_white">
+                                Гарантированный результат
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="advantages__item advantages__item__price_policy">
                     <img src="templates/<?php echo $this->template ?>/icons/advantages/cup.png" alt="shoe" class="advantages__icon">
                     <div class="advantages__subtitle">
-                    Курс массажа <br> -10%
+                    Курс массажа
                     </div>
-                    <div class="advantages__descr">При покупки сразу целого курса массажа, делается скидка.
-                        <div class=" advantages__descr__list_background_white">
-                            Экономия 10%
-                        </div>
-                        <div>
-                            Полный объем массажа
-                        </div>
-                        <div class="advantages__descr__list_background_white">
-                            Гарантированный результат
-                        </div>
-                        <div>
-                            Возврат остатка средств
-                        </div>
+                    <div class="advantages__subtitle__price">
+                    -10%
+                    </div>
+                    <div class="advantages__descr">
+                        <div class="advantages__descr__top">
+                            При покупки сразу целого курса массажа, делается скидка.
+                        </div>   
+                        <div class="advantages__descr__list_border">    
+                            <div class=" advantages__descr__list_background_white">
+                                Экономия 10%
+                            </div>
+                            <div class="advantages__descr__list_background">
+                                Полный объем массажа
+                            </div>
+                            <div class="advantages__descr__list_background_white">
+                                Гарантированный результат
+                            </div>
+                            <div class="advantages__descr__list_background">
+                                Возврат остатка средств
+                            </div>
+                            <div class="advantages__descr__list_background_white">
+                                Мотивация для себя   
+                            </div>
+                        </div>        
                     </div>
                 </div>
+            </div>
             </div>                                    
 
         </div>
     </section>
     <?php endif; ?>
+
+    <!-- Конец: Новая верся Section advantages -->
 
 
     <?php if($this->countModules('reviews')):?>
@@ -913,7 +1507,7 @@ $this->setGenerator(null); //отключили мета-тег generator
     <?php endif; ?>
 
     <footer class="footer">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.474981139927!2d83.78428131564897!3d53.33475318328089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dda5d25e61026d%3A0xacf26f29f0455edb!2z0KHRgtGD0LTQuNGPINC80LDRgdGB0LDQttCwINCQ0LvQtdC60YHQsNC90LTRgNCwINCh0L7QutC-0LvQvtCy0LA!5e0!3m2!1sru!2sru!4v1589809287399!5m2!1sru!2sru" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="yandex-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.474981139927!2d83.78428131564897!3d53.33475318328089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dda5d25e61026d%3A0xacf26f29f0455edb!2z0KHRgtGD0LTQuNGPINC80LDRgdGB0LDQttCwINCQ0LvQtdC60YHQsNC90LTRgNCwINCh0L7QutC-0LvQvtCy0LA!5e0!3m2!1sru!2sru!4v1589809287399!5m2!1sru!2sru" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     
         <div class="footer__info">
             <div class="footer__name">Профессиональный массаж</div>
@@ -1031,6 +1625,11 @@ $this->setGenerator(null); //отключили мета-тег generator
     <script src="templates/<?php echo $this->template ?>/js/slick.min.js"></script>
     <script src="templates/<?php echo $this->template ?>/js/jquery.validate.min.js"></script>
     <script src="templates/<?php echo $this->template ?>/js/jquery.maskedinput.min.js"></script>
+
+ 
+<!-- Если, что можо удалить -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
     
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

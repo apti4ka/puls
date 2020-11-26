@@ -23,8 +23,9 @@
 
 	<positions>
 		<position>Breadcrumbs</position>
+		<position>forms-new</position>
 		<position>promo</position>
-		<position>header_cap</position>
+		<position>header</position>
 		<position>about</position>
 		<position>advantages</position>
 		<position>consultation</position>

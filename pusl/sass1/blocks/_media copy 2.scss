@@ -1,0 +1,1055 @@
+@media screen and (max-width:1600px),only screen and (max-device-width:1600px) {
+
+    .carousel {
+        padding-top: 125px;
+    }
+
+
+
+
+    .about {
+        &__descr {
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+}
+
+   
+
+@media screen and (max-width:1400px),only screen and (max-device-width:1400px) {
+
+
+
+
+
+
+    .carousel {
+        padding-top: 117px;
+    }
+
+
+    .about {
+        &__descr {
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+}
+
+
+@media screen and (max-width:1351px),only screen and (max-device-width:1351px) {
+
+
+    .carousel {
+        padding-top: 140px;
+    }
+
+    .header1__subheader__logo img {
+        padding-top: 5px;
+    }
+
+
+
+    #menu ul li a {
+        padding: 0.5em 31px; 
+        }
+}    
+
+    
+@media screen and (max-width:1200px),only screen and (max-device-width:1200px) {
+
+    .header {
+        &__subheader {
+            &__logo {
+                img {
+                    padding: 13px 0 0 40px;
+                    max-height: 80px;
+                }
+              
+            }
+            &__contacts {
+                align-items: flex-start;
+            }
+
+            &__phone {
+                margin-top: 8px;
+                padding-right: 10px;
+            }
+            
+         
+        }
+        .button {
+            margin-right: 10px;
+        }
+    }
+
+
+    #menu ul li a {
+        padding: 0.5em 20px; 
+        }
+
+    .about {
+        &__descr {
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+    .button {
+        &__about_youtube {
+            margin-top: 25px;
+        }
+    }
+
+    .button {
+        &__about {
+            margin-top: 35px;
+        }
+    }
+
+}  
+    
+
+       
+@media screen and (max-width:991px),only screen and (max-device-width:991px) {
+
+    .header {
+        &__subheader {
+            &__logo {
+                img {
+                    padding: 13px 0 0 17px;
+                    max-height: 72px;
+                }
+              
+            }
+            &__official  {
+                font-size: 16px;
+                padding: 0 0 0 15px;
+            
+            }
+            &__phone {
+                margin-top: 8px;
+                padding-right: 10px;
+            }
+         
+        }
+        .button {
+            margin-right: 10px;
+        }
+    }
+
+
+    #menu ul li a {
+        padding: 0.5em 7px; 
+        }
+
+    .promo {
+        
+        .header__logo {
+            width: 200px;
+        }
+
+        .header__logo img {
+        width: 100%;
+        }
+
+        .header__official {
+        font-size: 15px;
+        }
+
+        .header__official span {
+        font-size: 13px;
+        }
+    }
+
+    .about {
+        &__descr {
+            &_youtube {
+                width: 350px; 
+                height: 540px;
+            }
+ 
+        } 
+        
+        
+    }
+
+    .button {
+        &__about_youtube {
+            margin-top: 25px;
+        }
+    }
+
+    .button {
+        &__about {
+            margin-top: 35px;
+        }
+    }
+    
+    .catalog__tab {
+        font-size: 16px;
+    }
+
+    .catalog__tab_services {
+        font-size: 14px;
+    }
+
+    .advantages__descr__top {
+    min-height: 147px;
+    }
+
+    .footer__info {
+    width: 340px;
+    height: 245px;
+    padding: 20px 35px 20px 35px;
+    }
+
+
+}  
+    
+@media screen and (max-width:767px),only screen and (max-device-width:767px) {
+
+    .header {
+        &__subheader {
+            &__logo {
+                img {
+                    display: none;
+                    padding: 10px 0 0 10px;
+                   
+                }
+                &__mob {
+                    display: block;
+                    img {
+                        padding: 0 0 0 10px;
+                        max-height: 40px;
+                    } 
+                }
+            }
+            &__official  {
+                display: none;
+                span {
+                    display: block;
+                }
+            
+            }
+            &__phone {
+                margin-top: 8px;
+                padding-right: 10px;
+            }
+            &__contacts {
+               align-items: space-between;
+            }
+        }
+
+        .button {
+            display: none;
+        }    
+    }
+    
+  
+.header__menu {    
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%; // - на 50% ширины контейнера для этой секции
+    height: 100vh; // - во всю высоту
+    padding: 20px 15px;
+    flex-direction: column; // - вертикальное направлеие
+    justify-content: center; // - вертикальное выравнивание по центру
+    align-items: center; // - горизонтальное выравнивание по центру
+    background-color: rgba(0,0,0, .6);
+    transition: 0.6s all; // - плаво выезжает меню
+    &_active {
+        left: 0;
+
+    }
+    &__item {
+        padding-right: 0;
+        border: none;
+        margin: 10px 0;
+        
+    }
+    &__link {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 300;
+    }
+    // &__phone {
+    //     display: flex;
+    //     max-height: 30px;
+    //     margin-top: -50px;
+    //     left: 80%;
+    //     padding: 0 0 0 40px;
+    //     font-size: 18px;
+    //     color:red;
+    // }
+    
+}
+
+
+
+
+.header__hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); // Выравнивание по Y
+    width: 26px;
+    height: 12px;
+    transition: 0.5s all; // - плавное формирование крестика
+    span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #2c2c2c;
+        margin-bottom: 2px;
+    }
+    &_active {
+        span { // псевдокласс span по отдельности декарируем
+            margin-bottom: -2px;
+            &:nth-child(1) {  // псевдокласс span -45deg
+            transform: translateY(3px) rotate(-45deg);
+            }
+            &:nth-child(2) { // псевдокласс span скрыть
+                display: none;
+            }
+            &:nth-child(3) {  // псевдокласс span 45deg
+            transform: translateY(3px) rotate(45deg);
+            }  
+                    
+        }    
+    }
+        
+}
+
+
+
+/* mobilemenu */
+
+    #menu.top-menu  {
+        width: 100%;
+        height: 40px;
+        background: #383636  url('../icons/menuicon.png') no-repeat center left 2%;
+        cursor: pointer;
+        transition: 0.6s all; // - плаво выезжает меню
+
+        
+    }
+    #menu.top-menu ul li {
+        display: none;
+    }
+
+    
+    #menu.mobilemenu  {
+        width: 100%;
+        height: 40px;
+        background: #383636  url('../icons/menuicon.png') no-repeat top 10px left 10px;
+        cursor: pointer;
+        margin-top: 0;
+        position: fixed;
+        top: 0;
+        // left: -100%;
+        width: 50%; // - на 50% ширины контейнера для этой секции
+        height: 100vh; // - во всю высоту
+        padding: 4px 4px;
+        flex-direction: column; // - вертикальное направлеие
+        justify-content: center; // - вертикальное выравнивание по центру
+        align-items: center; // - горизонтальное выравнивание по центру
+        background-color: rgba(0,0,0, .6);
+        transition: 0.6s all; // - плаво выезжает меню
+       
+    }
+
+
+
+
+/* End */
+
+// #menu {
+//     // background-color: #383636;
+//     // width: 100%;
+//     // height: 40px; 
+
+//     margin-top: 0;
+//     position: fixed;
+//     top: 0;
+//     // left: -100%;
+//     width: 50%; // - на 50% ширины контейнера для этой секции
+//     height: 100vh; // - во всю высоту
+//     padding: 20px 15px;
+//     flex-direction: column; // - вертикальное направлеие
+//     justify-content: center; // - вертикальное выравнивание по центру
+//     align-items: center; // - горизонтальное выравнивание по центру
+//     background-color: rgba(0,0,0, .6);
+//     transition: 0.6s all; // - плаво выезжает меню
+
+//   }
+  
+  /* меню сделать горизонтальным */
+    #menu ul li {
+        float: none;
+        list-style: none;
+    }
+
+
+  
+  /* в гор меню, прописать цвет, размер, отступы, декарации */
+  #menu ul li a {
+    padding: 0.5em 17px;
+    text-decoration: none; }
+  
+  /* где находшься выделть цветом  сделать подсветку hover */
+  #menu ul li a:hover, #menu ul li.current a {
+    background-color: #feba02; }
+  
+  /* вертикатьное меню */
+  /* спрятать подпункты */
+  #menu ul li > ul {
+    display: none;
+     }
+  
+  /* включть подпункты, позицонирование, слои, отступы */
+  #menu ul li:hover > ul {
+    display: block;
+    margin-top: -40px; 
+    left: 98%;
+    z-index: 9999;
+    position: absolute;
+    // background-color: #383636;
+    background-color: rgba(0,0,0, .6);
+    padding: 3px 3px; 
+    }
+  
+  /* отключить обтикание слева,  */
+  #menu ul li > ul li {
+    float: none; }
+  
+  /* подпункты 2 уровня */
+  #menu ul li ul li a {
+    display: block;
+    font-weight: 300;
+    color: #fff;
+    width: 270px;
+    
+    padding: 11px 30px;
+    text-decoration: none; }
+  
+  /* включть подпункты 3 уровня, позицонирование, слои, отступы */
+  #menu ul li > ul li:hover > ul {
+    // margin-top: -50px; 
+    // top: 10px; 
+    display: block;
+    top: 50px;
+    left: -100%;
+    z-index: 9999;
+    position: absolute;
+    // background-color: #383636;
+    // font-size: 15px;
+    background-color: rgba(0,0,0, .9);
+    // padding: 9px 30px;
+    // width: 102%;
+    // border: 1px solid; 
+    }
+  
+  /* подпункты 3 уровня */
+  #menu ul li ul li ul li a {
+    display: block;
+    font-weight: 300;
+    color: #fff; 
+    width: 100%;
+    padding: 8px 30px;
+    text-decoration: none; }
+  
+  /* autoservice end */
+
+
+
+
+
+
+
+
+
+
+
+    
+    .about {
+        background: url(../images/services/ukrasheniya/flowerleft.jpg) left center/cover no-repeat;
+
+        &__wrapper {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+        max-width: 100%;
+        }
+        &__subtitle {
+        margin-top: 8px;
+        }
+    
+        &__descr {
+
+            img {
+                margin-left: 10%;
+            }
+
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+    .button {
+        &__about_youtube {
+            margin: 25px 0 30px 0;
+        }
+    }
+
+    .button {
+        &__about {
+            margin: 25px auto;
+            display: block;
+            
+        }
+    }
+
+
+    .catalog {
+
+        &__tabs {
+            margin-top: 35px;
+            // display: none;
+            &__mob {
+                // display: inline-block;
+                // list-style-type: none;
+                // width: 100%;
+                flex-direction: row;
+                // justify-content: space-between;
+            }
+        }
+        &__tab {
+            // margin: 5px auto;
+            font-size: 12px;
+
+            &__mob {
+                
+                font-size: 14px;
+                line-height: 24px;
+                padding: 0 7px;
+            }
+        }
+        &__content {
+            margin-top: 25px;
+                       
+        }
+
+    }
+
+
+    
+    .advantages {
+
+        &__title {
+            margin-bottom: 0;
+        }
+    
+        &__wrapper {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__item {
+            padding: 40px 0 0 0;
+            max-width: 100%;
+            &__price_policy {
+                min-width: 100%;
+            }
+            &__course {
+            display: flex;
+            flex-wrap: wrap;
+            }
+        }
+        &__subtitle {
+            margin-top: 20px;
+        }
+        &__descr {
+            margin-top: 25px;
+            width: 100%;
+            &__top {
+                min-height: 20px;
+            }
+           
+        }
+
+        
+    
+    }
+
+
+
+
+}  
+
+
+@media screen and (max-width:670px),only screen and (max-device-width:670px) {
+
+
+
+
+    .catalog {
+
+
+        &__tabs {
+            margin-top: 20px;
+            float: right;
+            &__mob {
+                display: block;
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        &__tab {
+            margin-bottom: 15px;
+        }
+   
+      
+
+    }
+
+
+
+
+}  
+
+
+@media screen and (max-width:587px),only screen and (max-device-width:587px) {
+
+    .header__subheader__row {
+        height: 100%;
+        background-color: rgba(246, 246, 246, 0.9);
+    }
+
+    .header {
+        &__subheader {
+
+            &__row {
+                background-color: rgba(246, 246, 246, 0);
+            }
+            &__logo {
+                
+                img {
+                    display: none;
+                    padding: 10px 0 0 10px;
+                   
+                }
+                &__mob {
+                    display: block;
+                    img {
+                        padding: 0 0 0 10px;
+                        max-height: 40px;
+                        display: none;
+                    } 
+                }
+            }
+            &__official  {
+                display: none;
+                span {
+                    display: block;
+                }
+            
+            }
+            &__phone {
+                margin-top: 8px;
+                padding-right: 10px;
+                &__mob {
+                    // width: 50%;
+                    margin-top: 0;
+                    padding: 10px;
+                    background-color: rgba(246, 246, 246, 0.9);
+                }
+            }
+            &__contacts {
+               align-items: space-between;
+            }
+        }
+
+        .button {
+            display: none;
+        }    
+    }
+    
+  
+
+
+
+
+
+
+/* mobilemenu */
+
+    #menu.top-menu  {
+        display: none;
+    }
+
+    
+    .top-menu_mob {
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
+        padding: 6px 0 0 56px;
+        display: none; // времено отключил 
+    }
+
+
+// тест мобильного меню на 587
+
+    #menu.topmenu_587 {
+        display: block;
+        height: 40px;
+        background: #383636  url('../icons/menuicon.png') no-repeat top 10px left 10px;
+        background-color: rgba(0,0,0, .8);
+        cursor: pointer;
+        transition: 0.6s all; // - плаво выезжает меню  
+        ul li {
+            display: none; 
+        }
+    }
+
+
+    #menu.mobilemenu_587  {
+        width: 90%;
+        background: #383636  url('../icons/menuicon.png') no-repeat top 10px left 10px;
+        cursor: pointer;
+        margin-top: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        // width: 50%; // - на 50% ширины контейнера для этой секции
+        width: 100%;
+        height: 100vh; // - во всю высоту
+        padding: 4px 4px;
+        flex-direction: column; // - вертикальное направлеие
+        justify-content: center; // - вертикальное выравнивание по центру
+        align-items: center; // - горизонтальное выравнивание по центру
+        background-color: rgba(0,0,0, .8);
+        transition: 0.6s all; // - плаво выезжает меню
+
+        ul {
+            width: 99%;
+            // padding: 0 0 0 8%;
+            // > ul {
+            //     padding: 0;
+            // }
+        }
+       
+    }
+
+      /* autoservice begin */
+  /*сама менюшка */
+  
+
+
+#menu {
+        // background-color: rgba(0,0,0, 1);
+        // width: 100%;
+        ul li {
+            // float: none;
+            // list-style: none; 
+
+            //* в гор меню, прописать цвет, размер, отступы, декарации */
+            a {
+                display: block;
+                font-weight: 300;
+                color: #ffffff;
+                padding: 6px 10px;
+                text-decoration: none; 
+            }
+
+
+        }
+    }
+
+#menu ul li.parent {
+    // margin-left: 5px;
+    padding: 0 0 0 17px;
+    background: url('../icons/right.svg') no-repeat top 0px left 0px;
+}
+
+  
+//   /* в гор меню, прописать цвет, размер, отступы, декарации */
+//   #menu ul li a {
+//     display: block;
+//     font-weight: 300;
+//     color: #ffffff;
+//     padding: 6px 10px;
+//     text-decoration: none; 
+// }
+
+
+  
+  /* где находшься выделть цветом  сделать подсветку hover */
+  #menu ul li a:hover, #menu ul li.current a {
+    background-color: #feba02; }
+  
+  /* вертикатьное меню */
+  /* спрятать подпункты */
+  #menu ul li > ul {
+    display: none; }
+  
+  /* включть подпункты, позицонирование, слои, отступы */
+  #menu ul li:hover > ul {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    background-color: #383636;
+    padding: 3px 5px; }
+  
+  /* отключить обтикание слева,  */
+  #menu ul li > ul li {
+    float: none; }
+  
+  /* подпункты 2 уровня */
+  #menu ul li ul li a {
+    display: block;
+    font-weight: 300;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none; }
+  
+  /* включть подпункты 3 уровня, позицонирование, слои, отступы */
+  #menu ul li > ul li:hover > ul {
+    margin-top: -50px;
+    display: block;
+    left: 98%;
+    z-index: 9999;
+    position: absolute;
+    background-color: #383636;
+    padding: 1px;
+    width: 102%;
+    border: 1px solid; }
+  
+  /* подпункты 3 уровня */
+  #menu ul li ul li ul li a {
+    display: block;
+    font-weight: 300;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none; }
+    
+  
+  /* autoservice end */
+
+
+  
+//   .menu_test {
+      
+//         position: fixed;
+//         top: 0;
+//         left: -100%;
+//         width: 50%;
+//         height: 100vh;
+//         padding: 20px 15px;
+//         flex-direction: column; // - вертикальное направлеие
+//         justify-content: center; // - вертикальное выравнивание по центру
+//         align-items: center; // - горизонтальное выравнивание по центру
+//         background-color: rgba(0,0,0, .8);
+//         transition: 0.6s all; // - плаво выезжает меню
+//         &_active {
+//             left: 0;
+//         }
+
+        
+//         ul {
+//             list-style: none;
+//             padding-right: 0;
+//             border: none;
+
+//             li {
+
+//                 a {
+//                 font-size: 20px;
+//                 font-weight: 300;
+//                 color: #fff;
+//                 text-decoration: none; 
+//                 }
+//             }
+
+
+//         }
+//   }
+
+//  .hamburger {
+//         display: block;
+//         position: absolute;
+//         right: 10px;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         width: 26px;
+//         height: 12px;
+//         span {
+//             display: block;
+//             height: 2px;
+//             width: 100%;
+//             background-color: #fff;
+//             margin-bottom: 2px;
+//         }
+//         &_active {
+//             span {
+//                 margin-bottom: -2px;
+//                 &:nth-child(1) {
+//                     transform: rotate(-45ger);
+//                 }
+//                 &:nth-child(2) {
+//                     display: none;
+//                 }
+//                 &:nth-child(3) {
+//                     transform: rotate(45ger);
+//                 }
+//             }
+//         }
+//     }
+
+
+  
+    .about {
+        background: url(../images/services/ukrasheniya/flowerleft.jpg) left center/cover no-repeat;
+
+        &__wrapper {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+        max-width: 100%;
+        }
+        &__subtitle {
+        margin-top: 8px;
+        }
+    
+        &__descr {
+
+            img {
+                margin-left: 10%;
+            }
+
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+    .button {
+        &__about_youtube {
+            margin: 25px 0 30px 0;
+        }
+    }
+
+    .button {
+        &__about {
+            margin: 25px auto;
+            display: block;
+            
+        }
+    }
+
+
+    .catalog {
+
+        &__tabs {
+            margin-top: 20px;
+           
+        }
+        &__tab {
+            // margin: 5px auto;
+            font-size: 12px;
+        }
+        &__content {
+            margin-top: 25px;
+                       
+        }
+
+    }
+
+
+    
+    .advantages {
+
+        &__title {
+            margin-bottom: 0;
+        }
+    
+        &__wrapper {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__item {
+            padding: 40px 0 0 0;
+            max-width: 100%;
+            &__price_policy {
+                min-width: 100%;
+            }
+            &__course {
+            display: flex;
+            flex-wrap: wrap;
+            }
+        }
+        &__subtitle {
+            margin-top: 20px;
+        }
+        &__descr {
+            margin-top: 25px;
+            width: 100%;
+            &__top {
+                min-height: 20px;
+            }
+           
+        }
+
+        
+    
+    }
+
+
+
+
+}
+
+
+
+@media screen and (max-width:480px),only screen and (max-device-width:480px) {
+
+
+}
+
+
+
+@media screen and (max-width:375px),only screen and (max-device-width:375px) {
+
+
+}
+
+
+@media screen and (max-width:360px),only screen and (max-device-width:360px) {
+
+
+}

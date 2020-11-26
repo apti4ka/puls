@@ -1,0 +1,388 @@
+@media screen and (max-width:1600px),only screen and (max-device-width:1600px) {
+
+    .carousel {
+        padding-top: 125px;
+    }
+
+
+
+
+    .about {
+        &__descr {
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+}
+
+   
+
+@media screen and (max-width:1400px),only screen and (max-device-width:1400px) {
+
+    .carousel {
+        padding-top: 117px;
+    }
+
+
+    .about {
+        &__descr {
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+}
+
+
+@media screen and (max-width:1351px),only screen and (max-device-width:1351px) {
+
+
+    .carousel {
+        padding-top: 140px;
+    }
+
+    .header1__subheader__logo img {
+        padding-top: 5px;
+    }
+
+
+
+    #menu ul li a {
+        padding: 0.5em 31px; 
+        }
+}    
+
+    
+@media screen and (max-width:1200px),only screen and (max-device-width:1200px) {
+
+
+    #menu ul li a {
+        padding: 0.5em 20px; 
+        }
+
+    .about {
+        &__descr {
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+    .button {
+        &__about_youtube {
+            margin-top: 25px;
+        }
+    }
+
+    .button {
+        &__about {
+            margin-top: 35px;
+        }
+    }
+
+}  
+    
+
+       
+@media screen and (max-width:991px),only screen and (max-device-width:991px) {
+
+    .header1__subheader__logo img {
+        padding-top: 5px;
+    }
+
+
+    #menu ul li a {
+        padding: 0.5em 7px; 
+        }
+
+    .promo {
+        
+        .header__logo {
+            width: 200px;
+        }
+
+        .header__logo img {
+        width: 100%;
+        }
+
+        .header__official {
+        font-size: 15px;
+        }
+
+        .header__official span {
+        font-size: 13px;
+        }
+    }
+
+    .about {
+        &__descr {
+            &_youtube {
+                width: 350px; 
+                height: 540px;
+            }
+        } 
+        img {
+        display: none;    
+        }
+        
+    }
+
+    .button {
+        &__about_youtube {
+            margin-top: 25px;
+        }
+    }
+
+    .button {
+        &__about {
+            margin-top: 35px;
+        }
+    }
+    
+    .catalog__tab {
+        font-size: 16px;
+    }
+
+    .catalog__tab_services {
+        font-size: 14px;
+    }
+
+    .advantages__descr__top {
+    min-height: 147px;
+    }
+
+    .footer__info {
+    width: 340px;
+    height: 245px;
+    padding: 20px 35px 20px 35px;
+    }
+
+
+}  
+    
+@media screen and (max-width:767px),only screen and (max-device-width:767px) {
+
+
+    .header__subheader__logo {
+        display: none;
+    }
+    
+    .header__subheader__logo img {
+        padding: 10px 0 0 10px;
+        display: none;
+    }
+
+    .header__subheader__official  {
+        display: none;    
+}
+
+    .header__subheader__contacts {
+        
+				align-items: center;
+        display: none;
+    }
+
+
+
+
+
+
+.header1__menu {    
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%; // - на 50% ширины контейнера для этой секции
+    height: 100vh; // - во всю высоту
+    padding: 20px 15px;
+    flex-direction: column; // - вертикальное направлеие
+    justify-content: center; // - вертикальное выравнивание по центру
+    align-items: center; // - горизонтальное выравнивание по центру
+    background-color: rgba(0,0,0, .6);
+    transition: 0.6s all; // - плаво выезжает меню
+    &_active {
+        left: 0;
+
+    }
+    &__item {
+        padding-right: 0;
+        border: none;
+        margin: 10px 0;
+        
+    }
+    &__link {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 300;
+    }
+}
+
+.header__hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); // Выравнивание по Y
+    width: 26px;
+    height: 12px;
+    transition: 0.5s all; // - плавное формирование крестика
+    span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #2c2c2c;
+        margin-bottom: 2px;
+    }
+    &_active {
+        span { // псевдокласс span по отдельности декарируем
+            margin-bottom: -2px;
+            &:nth-child(1) {  // псевдокласс span -45deg
+            transform: translateY(3px) rotate(-45deg);
+            }
+            &:nth-child(2) { // псевдокласс span скрыть
+                display: none;
+            }
+            &:nth-child(3) {  // псевдокласс span 45deg
+            transform: translateY(3px) rotate(45deg);
+            }  
+                    
+        }    
+    }
+        
+}
+
+
+
+/* mobilemenu */
+
+    #menu.top-menu  {
+        height: 40px;
+        background: #383636  url('../icons/menuicon.png') no-repeat center left 2%;
+        cursor: pointer;
+    }
+    #menu.top-menu ul li {
+        display: none;
+    }
+
+/* End */
+
+#menu {
+    background-color: #383636;
+    width: 100%;
+    height: 40px; 
+  }
+  
+  /* меню сделать горизонтальным */
+  #menu ul li {
+    float: none;
+    list-style: none; }
+  
+  /* в гор меню, прописать цвет, размер, отступы, декарации */
+  #menu ul li a {
+    display: block;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0.5em 40px;
+    text-decoration: none; }
+  
+  /* где находшься выделть цветом  сделать подсветку hover */
+  #menu ul li a:hover, #menu ul li.current a {
+    background-color: #feba02; }
+  
+  /* вертикатьное меню */
+  /* спрятать подпункты */
+  #menu ul li > ul {
+    display: none; }
+  
+  /* включть подпункты, позицонирование, слои, отступы */
+  #menu ul li:hover > ul {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    background-color: #383636;
+    padding: 3px 5px; }
+  
+  /* отключить обтикание слева,  */
+  #menu ul li > ul li {
+    float: none; }
+  
+  /* подпункты 2 уровня */
+  #menu ul li ul li a {
+    display: block;
+    font-weight: 300;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none; }
+  
+  /* включть подпункты 3 уровня, позицонирование, слои, отступы */
+  #menu ul li > ul li:hover > ul {
+    margin-top: -50px;
+    display: block;
+    left: 98%;
+    z-index: 9999;
+    position: absolute;
+    background-color: #383636;
+    padding: 1px;
+    width: 102%;
+    border: 1px solid; }
+  
+  /* подпункты 3 уровня */
+  #menu ul li ul li ul li a {
+    display: block;
+    font-weight: 300;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none; }
+    
+  
+  /* autoservice end */
+
+
+
+
+
+
+
+
+
+
+
+    
+    .about {
+        &__descr {
+            &_youtube {
+                width: 426px; 
+                height: 515px;
+            }
+        } 
+    }
+
+    .button {
+        &__about_youtube {
+            margin-top: 25px;
+        }
+    }
+
+    .button {
+        &__about {
+            margin-top: 35px;
+        }
+    }
+
+    .catalog__tab {
+        font-size: 16px;
+    }
+
+    
+
+}  
+
+
+@media screen and (max-width:587px),only screen and (max-device-width:587px) {
+
+}

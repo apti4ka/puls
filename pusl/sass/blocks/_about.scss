@@ -1,0 +1,51 @@
+
+.about {
+    padding: 70px 0 80px 0;
+	background-color: #fff;
+	background: url('../images/services/ukrasheniya/flowerleft.jpg') center (center/cover) no-repeat;
+
+	&__wrapper {
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-between;
+	}
+
+	&__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		max-width: 49%;
+        &__price_policy {
+            max-width: 50%;
+        }
+	}
+	
+    &__subtitle {
+        margin-top: 38px;
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__descr {
+        margin-top: 26px;
+        color: #0d0d0d;
+        font-size: 14px;
+        font-weight: 300;
+		text-align: center;
+		width: 99%;
+
+        &__list_background_white{
+            background-color: #fff;
+            margin: 5px;
+            padding: 5px 0px;
+        }
+        img {
+            display: block;
+            width: 150px;
+            float: left;
+            border-radius: 100%;
+        }
+
+    }
+    
+}

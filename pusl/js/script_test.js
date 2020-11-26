@@ -101,6 +101,34 @@ $(document).ready(function(){
         return false;
     });
 
+    // Скрипт для form_new
+    jQuery(".userInput").focus(function() {
+        jQuery(this).parent().addClass("focus");
+    }).blur(function() {
+        if(jQuery(this).val()===''){
+            jQuery(this).parent().removeClass("focus")
+        }
+    });
+
+// hamburger
+    
+// window.addEventListener('DOMContentLoaded', () => {
+//         const menu = document.querySelector('.menu_test'),
+//         menuItem = document.querySelectorAll('.menu_test__item'),
+//         hamburger = document.querySelector('.hamburger');
+    
+//         hamburger.addEventListener('click', () => {
+//             hamburger.classList.toggle('hamburger_active');
+//             menu.classList.toggle('menu_test_active');
+//         });
+    
+//         menuItem.forEach(item => {
+//             item.addEventListener('click', () => {
+//                 hamburger.classList.toggle('hamburger_active');
+//                 menu.classList.toggle('menu_active');
+//             })
+//         })
+//     })
 
     // Smooth scroll and pageup
 
@@ -116,7 +144,7 @@ $(document).ready(function(){
         const _href = jQuery(this).attr("href");
         jQuery("html, body").animate({scrollTop: jQuery(_href).offset().top+"px"});
         return false;
-    });
+    }); 
 
     new WOW().init();
 

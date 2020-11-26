@@ -1,0 +1,81 @@
+  
+  .hamburger {
+    display: none; }
+  
+  /* autoservice begin */
+  /*сама менюшка */
+
+  
+  #menu {
+    // background-color: #383636;
+    
+    background-color: rgba(0,0,0, .8);
+    width: 100%;
+    height: 40px; 
+    // margin-top: 89px; // - спустил под шапку меню 16.10
+  }
+  
+  /* меню сделать горизонтальным */
+  #menu ul li {
+    float: left;
+    list-style: none; }
+  
+  /* в гор меню, прописать цвет, размер, отступы, декарации */
+  #menu ul li a {
+    display: block;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0.5em 40px;
+    text-decoration: none; }
+  
+  /* где находшься выделть цветом  сделать подсветку hover */
+  #menu ul li a:hover, #menu ul li.current a {
+    background-color: #feba02; }
+  
+  /* вертикатьное меню */
+  /* спрятать подпункты */
+  #menu ul li > ul {
+    display: none; }
+  
+  /* включть подпункты, позицонирование, слои, отступы */
+  #menu ul li:hover > ul {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    background-color: #383636;
+    padding: 3px 5px; }
+  
+  /* отключить обтикание слева,  */
+  #menu ul li > ul li {
+    float: none; }
+  
+  /* подпункты 2 уровня */
+  #menu ul li ul li a {
+    display: block;
+    font-weight: 300;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none; }
+  
+  /* включть подпункты 3 уровня, позицонирование, слои, отступы */
+  #menu ul li > ul li:hover > ul {
+    margin-top: -50px;
+    display: block;
+    left: 98%;
+    z-index: 9999;
+    position: absolute;
+    background-color: #383636;
+    padding: 1px;
+    width: 102%;
+    border: 1px solid; }
+  
+  /* подпункты 3 уровня */
+  #menu ul li ul li ul li a {
+    display: block;
+    font-weight: 300;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none; }
+    
+  
+  /* autoservice end */

@@ -1,88 +1,124 @@
-.header_menu {
-    position: relative;
-    height: 40px; 
-  }
+/* Menu */    
 
 
-  nav {
-    position: fixed;
-    width: 100%;
-    height: 40px;
-    background-color: #212121;
-    z-index: 5; }
-  
-  .hamburger {
-    display: none; }
-  
-  /* autoservice begin */
-  /*сама менюшка */
-  #menu {
-    background-color: #383636;
-    width: 100%;
-    margin: 0px 0;
-    height: 40px; }
-  
-  /* меню сделать горизонтальным */
-  #menu ul li {
-    float: left;
-    list-style: none; }
-  
-  /* в гор меню, прописать цвет, размер, отступы, декарации */
-  #menu ul li a {
-    display: block;
-    font-weight: 300;
-    color: #ffffff;
-    padding: 0.5em 40px;
-    text-decoration: none; }
-  
-  /* где находшься выделть цветом  сделать подсветку hover */
-  #menu ul li a:hover, #menu ul li.current a {
-    background-color: #feba02; }
-  
-  /* вертикатьное меню */
-  /* спрятать подпункты */
-  #menu ul li > ul {
-    display: none; }
-  
-  /* включть подпункты, позицонирование, слои, отступы */
-  #menu ul li:hover > ul {
-    display: block;
-    z-index: 9999;
-    position: absolute;
-    background-color: #383636;
-    padding: 3px 5px; }
-  
-  /* отключить обтикание слева,  */
-  #menu ul li > ul li {
-    float: none; }
-  
-  /* подпункты 2 уровня */
-  #menu ul li ul li a {
-    display: block;
-    font-weight: 300;
-    color: #fff;
-    padding: 12px 30px;
-    text-decoration: none; }
-  
-  /* включть подпункты 3 уровня, позицонирование, слои, отступы */
-  #menu ul li > ul li:hover > ul {
-    margin-top: -50px;
-    display: block;
-    left: 98%;
-    z-index: 9999;
-    position: absolute;
-    background-color: #383636;
-    padding: 1px;
-    width: 102%;
-    border: 1px solid; }
-  
-  /* подпункты 3 уровня */
-  #menu ul li ul li ul li a {
-    display: block;
-    font-weight: 300;
-    color: #fff;
-    padding: 12px 30px;
-    text-decoration: none; }
-    
-  
-  /* autoservice end */
+
+
+#menu {
+	margin: 0px;
+	padding: 0;	
+}
+
+#menu ul {
+padding-inline-start: 0;
+}
+
+#menu ul, #menu li ul {
+	list-style: none;
+}
+
+#menu > ul {
+	display: flex;
+	// justify-content: center;
+	// justify-content: space-between;
+	background-color: rgba(0,0,0, .6);
+}
+
+
+#menu > ul li a {
+	display: flex;
+	justify-content: center;
+    // align-items: center;
+	// background-color: rgba(0,0,0, .6);
+	padding: 10px 53px;
+	font-size: 14px;
+	font-weight: 300;
+	color: #fff;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	// border-bottom: 1px solid #fff;
+}
+
+// #menu > ul li a {
+// 	display: block;
+// 	// background-color: rgba(0,0,0, .6);
+// 	padding: 10px 53px;
+// 	font-size: 14px;
+// 	font-weight: 300;
+// 	color: #fff;
+// 	text-transform: uppercase;
+// 	transition: all 0.3s ease;
+// 	// border-bottom: 1px solid #fff;
+// }
+
+#menu > ul li {
+	position: relative;
+	border-right: 1px solid #fff;
+	width: 100%;
+	
+}
+
+// #menu > ul li > a i.fa {
+//    position: absolute;
+//    top: 15px;
+//    left: 12px;
+//    font-size: 18px;
+// }
+
+#menu > ul li:first-child {
+	border-left: 1px solid #fff;
+}
+
+#menu > ul li:last-child {
+	border-right: 1px solid #fff;
+}
+
+#menu li a:hover {
+	background-color: #feba02;
+	color: #fff;
+	box-shadow: 1px 5px 10px -5px black;
+	transition: all 0.3s ease;
+}
+
+/* Sub menu */
+
+#menu li ul {
+	position: absolute;
+	width: 230px;
+	display: none;
+}
+
+
+// #menu li > ul li	{
+// border-bottom: 1px solid #fff;
+// }
+
+#menu li > ul li a {
+	display: flex;
+	justify-content: left;
+	font-size: 15px;
+	padding: 10px 10px 10px 20px;
+	text-transform: none;
+	background-color: rgba(0,0,0, .8);
+
+	
+}
+
+#menu li > ul li ul {
+	position: absolute;
+	right: -230px;
+	top: 0;
+	z-index: 100;
+}
+
+#menu li:hover > ul {
+	display: block;
+}
+
+/* Sub sub menu */
+
+#menu li > ul li > ul li a {
+	
+	background-color: rgba(0,0,0, .9);
+}
+
+
